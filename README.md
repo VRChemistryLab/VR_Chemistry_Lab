@@ -1,7 +1,7 @@
-# VR_Chemistry_Lab
+# VR Chemistry Lab
 
 ## Description
-The VR Chemistry Lab is intended for educational purposes. Users can conduct experiments, that they wouldn't be able to do in real life. 
+The VR Chemistry Lab is designed for educational purposes. Users can conduct experiments, that they wouldn't be able to do in real life. 
 Features: 
 - use tools like tweezers, tubeclamps, test tubes and many more
 - heat with a bunsen burner
@@ -27,21 +27,20 @@ Possible Reaction so far:
 - Run start.bat
 
 ## Made with
-Godot Version 4.5.1 (source: https://godotengine.org/)
-Python 3.14         (source: https://www.python.org/)
-Cantera 3.2.0       (source: https://cantera.org/)
-Reaktoro 2.13.0     (source: https://reaktoro.org/)
+- Godot Version 4.5.1 (source: https://godotengine.org/)
+- Python 3.14         (source: https://www.python.org/)
+- Cantera 3.2.0       (source: https://cantera.org/)
+- Reaktoro 2.13.0     (source: https://reaktoro.org/)
 
 ## Run the codebase
-- make sure Godot, Python, Cantera and Reaktoro are installed
-- the godot project can be found at code/godot_project_VR_Chemistry_Lab
-- the python scripts (cantera, reaktoro) can be found at code/backend
+- Make sure Godot, Python, Cantera and Reaktoro are installed.
+- The godot project can be found at code/godot_project_VR_Chemistry_Lab.
+- The python scripts (cantera, reaktoro) can be found at code/backend.
 
 ## Contributing
 We are open to contributions of many kinds.
 
-For people who want to make changes to the project, additioal information can be found at documentation/API
+For people who want to make changes to the project, additional information can be found at documentation/API.
 
 ## Contact
-
-contact us at VRChemistryLab2026@gmail.com
+Contact us at VRChemistryLab2026@gmail.com.
