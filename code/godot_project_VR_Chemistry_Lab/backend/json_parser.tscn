@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1h5o3ndvh35x"]
+
+[ext_resource type="Script" uid="uid://bxu4u1orjfdyw" path="res://scripts/backend_scripts/json parser.gd" id="1_qs2su"]
+
+[node name="json parser" type="Node"]
+script = ExtResource("1_qs2su")

@@ -1,0 +1,63 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="VR Chemistry Lab"
+config/description="A VR Chemistry Lab for experimenting safely."
+run/main_scene="uid://cyckb733fh7yd"
+config/features=PackedStringArray("4.5", "Mobile")
+boot_splash/bg_color=Color(0.26666668, 0.33333334, 0.29411766, 1)
+boot_splash/image="uid://c3k7w8d7je654"
+config/icon="uid://c3k7w8d7je654"
+
+[autoload]
+
+XRToolsUserSettings="*res://addons/godot-xr-tools/user_settings/user_settings.gd"
+XRToolsRumbleManager="*res://addons/godot-xr-tools/rumble/rumble_manager.gd"
+DataSynchronizer="*res://backend/data_synchronizer.tscn"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg", "res://addons/websocket/plugin.cfg")
+
+[global_group]
+
+tweezer=""
+table=""
+bottlecap=""
+bottle=""
+chemical=""
+flame=""
+tooltable=""
+floor=""
+testtube=""
+tool=""
+na=""
+dontCollideWithStandingCylinder=""
+standingcylinder_cap=""
+standingCylinder=""
+precipitation=""
+dontCollideWithTestTube=""
+dontCollideWithBottle=""
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+
+[xr]
+
+openxr/enabled=true
+shaders/enabled=true

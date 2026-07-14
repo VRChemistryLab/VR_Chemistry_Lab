@@ -1,0 +1,67 @@
+[gd_scene load_steps=12 format=3 uid="uid://ccvkun2urki8u"]
+
+[ext_resource type="Script" uid="uid://cn6reys15ddp3" path="res://scripts/reaction_test_scene.gd" id="1_5xq50"]
+[ext_resource type="PackedScene" uid="uid://cbqq3naggssih" path="res://objects/player.tscn" id="4_khn1b"]
+[ext_resource type="PackedScene" uid="uid://c4yyosjgbpbib" path="res://objects/tools/bunsenburner.tscn" id="4_ylb3y"]
+[ext_resource type="PackedScene" uid="uid://ctfxerwhimlki" path="res://objects/chemicals/na.tscn" id="5_g3l6c"]
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="5_ms20u"]
+[ext_resource type="PackedScene" uid="uid://1ux8q4dw2vb8" path="res://objects/chemicals_stored/standingcylinder_cl2.tscn" id="7_5xq50"]
+[ext_resource type="PackedScene" uid="uid://bin8e2tfva3me" path="res://objects/chemicals_stored/standingcylinder_br2.tscn" id="8_f0yry"]
+[ext_resource type="PackedScene" uid="uid://b5ak0ewiynu72" path="res://objects/furniture/workstation/table.tscn" id="11_g3l6c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_86kjj"]
+albedo_color = Color(0.54, 0.54, 0.54, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_pue3m"]
+material = SubResource("StandardMaterial3D_86kjj")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m0stl"]
+
+[node name="testSceneMain" type="Node3D"]
+script = ExtResource("1_5xq50")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(1, 1, 0.89411765, 1)
+light_energy = 0.7
+shadow_enabled = true
+
+[node name="StartXR" parent="." instance=ExtResource("5_ms20u")]
+
+[node name="player" parent="." instance=ExtResource("4_khn1b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9090892, 0.073716044)
+
+[node name="plane" type="MeshInstance3D" parent="."]
+transform = Transform3D(7, 0, 0, 0, 0.3, 0, 0, 0, 3.5, 0.0034823418, -0.1555182, 0.1262598)
+mesh = SubResource("BoxMesh_pue3m")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="plane"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="plane/StaticBody3D"]
+shape = SubResource("BoxShape3D_m0stl")
+
+[node name="bunsenburner" parent="." instance=ExtResource("4_ylb3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.005543709, 0.70400536, -0.6812033)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 23.0
+one_shot = true
+autostart = true
+
+[node name="table" parent="." instance=ExtResource("11_g3l6c")]
+transform = Transform3D(-0.060769808, 0, 0.9981518, 0, 1, 0, -0.9981518, 0, -0.060769808, 0.019035935, -0.24278963, -0.4998337)
+
+[node name="chemicals" type="Node3D" parent="."]
+
+[node name="Na" parent="chemicals" instance=ExtResource("5_g3l6c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1762408, 0.81246996, -0.34162742)
+
+[node name="standingcylinder_cl2" parent="chemicals" instance=ExtResource("7_5xq50")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16372252, 0.6935187, -0.32074517)
+
+[node name="standingcylinder_br2" parent="chemicals" instance=ExtResource("8_f0yry")]
+
+[node name="Na2" parent="chemicals" instance=ExtResource("5_g3l6c")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dbd40nu3on6wp"]
+
+[ext_resource type="Script" uid="uid://c48gkl6nsipll" path="res://scripts/audio_collision.gd" id="2_rbkk8"]
+
+[node name="audio_collision" type="AudioStreamPlayer3D"]
+volume_db = 1.0
+script = ExtResource("2_rbkk8")

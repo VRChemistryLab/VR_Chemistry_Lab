@@ -1,0 +1,56 @@
+[gd_scene load_steps=12 format=3 uid="uid://ce38c6rgdsaft"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_2jgnm"]
+[ext_resource type="PackedScene" uid="uid://c6nwmsqhyq4r8" path="res://backend/reaction_part.tscn" id="2_14gi7"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="3_cm88g"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="4_dytpa"]
+[ext_resource type="Animation" uid="uid://cnng6xumhw7cx" path="res://addons/godot-xr-tools/hands/animations/left/Rounded.res" id="4_x7fgg"]
+[ext_resource type="Animation" uid="uid://wcwa3p1qrhwr" path="res://addons/godot-xr-tools/hands/animations/right/Rounded.res" id="5_dytpa"]
+[ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="5_x7fgg"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_a1jgr"]
+height = 0.009
+radius = 0.01
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_a1jgr"]
+top_radius = 0.0
+bottom_radius = 0.01
+height = 0.009
+
+[sub_resource type="Resource" id="Resource_dytpa"]
+script = ExtResource("5_x7fgg")
+open_pose = ExtResource("4_x7fgg")
+closed_pose = ExtResource("4_x7fgg")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="Resource" id="Resource_3uglx"]
+script = ExtResource("5_x7fgg")
+open_pose = ExtResource("5_dytpa")
+closed_pose = ExtResource("5_dytpa")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[node name="NaBr" groups=["dontCollideWithStandingCylinder", "dontCollideWithTestTube", "precipitation"] instance=ExtResource("1_2jgnm")]
+
+[node name="reactionPart" parent="." index="0" instance=ExtResource("2_14gi7")]
+CHEMICAL_NAME = "NaBr"
+AMOUNT_IN_MOL = 0.001
+
+[node name="CollisionShape3D" parent="." index="1"]
+shape = SubResource("CylinderShape3D_a1jgr")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." index="2"]
+mesh = SubResource("CylinderMesh_a1jgr")
+skeleton = NodePath("../reactionPart")
+
+[node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("3_cm88g")]
+transform = Transform3D(0.052928574, -0.9985983, 9.118439e-11, 0.99691015, 0.052839097, -0.05812159, 0.05804012, 0.003076293, 0.9983095, -0.052327085, 0.028347578, -0.08751029)
+hand_pose = SubResource("Resource_dytpa")
+
+[node name="GrabPointHandRight" parent="." index="4" instance=ExtResource("4_dytpa")]
+transform = Transform3D(0.05233597, 0.99862945, 0, -0.9969735, 0.052249186, -0.05756402, -0.05748513, 0.003012669, 0.99834174, 0.052, 0.028, -0.088)
+hand_pose = SubResource("Resource_3uglx")
+
+[node name="Area3D" type="Area3D" parent="." index="5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" index="0"]
+shape = SubResource("CylinderShape3D_a1jgr")

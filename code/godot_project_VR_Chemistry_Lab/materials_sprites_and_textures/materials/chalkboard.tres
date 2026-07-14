@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://4uc8nkodcjsr"]
+
+[ext_resource type="Texture2D" uid="uid://btyfayuhhslmc" path="res://materials_sprites_and_textures/textures/SurfaceImperfections008_4K-JPG/SurfaceImperfections008_4K_var1.jpg" id="1_v04tj"]
+
+[resource]
+albedo_color = Color(0.11764706, 0.38431373, 0.22352941, 1)
+metallic = 0.2
+metallic_specular = 0.2
+metallic_texture = ExtResource("1_v04tj")
+roughness_texture = ExtResource("1_v04tj")
+uv1_scale = Vector3(0.05, 0.05, 0.05)

@@ -1,0 +1,55 @@
+units:
+  length: cm
+  time: s
+  quantity: mol
+  activation-energy: J/mol   
+
+
+phases:
+- name: gas
+  thermo: ideal-gas
+  kinetics: gas
+  reactions: none
+  species: [Cl2]
+
+- name: surface
+  thermo: ideal-surface
+  kinetics: surface
+  reactions: all
+  species: [Na, NaCl]
+  site-density: 1e-3
+  adjacent-phases: [gas]
+
+
+species:
+- name: Na
+  composition: {Na: 1}
+  thermo:
+    model: constant-cp
+    cp0: 16.245     # J/(mol*K) c from janaf for 400K but cp0=0.5*c weil effektiv nur oberfläche erhitzt werden kann
+    h0: 0.0         # kJ/mol from janaf
+    s0: 51.455      # J/(mol*K) c from janaf
+
+- name: NaCl
+  composition: {Na: 1, Cl: 1}
+  thermo:
+    model: constant-cp
+    cp0: 52.35    # J/(mol*K) from janaf for 400K (NaCl(cr))
+    h0: -413318.0 # J/mol from janaf for room temperature
+    s0: 87.226    # J/(mol*K) c from janaf  for room temperature
+
+- name: Cl2
+  composition: {Cl: 2}
+  thermo:
+    model: constant-cp
+    cp0: 35.296   # J/(mol*K) from janaf for 400K
+    h0: 3533.0 	# J/mol from janaf for room temperature
+    s0: 233.263   # J/(mol*K) c from janaf  for room temperature
+
+
+reactions:
+- equation: 2 Na + Cl2 <=> 2 NaCl
+  rate-constant:
+    A: 1.0e9
+    b: 0.0
+    Ea: 1.0e1

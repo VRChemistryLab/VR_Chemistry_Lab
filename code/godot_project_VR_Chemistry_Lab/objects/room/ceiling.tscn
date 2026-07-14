@@ -1,0 +1,57 @@
+[gd_scene load_steps=8 format=3 uid="uid://h1nafrpkc522"]
+
+[ext_resource type="Texture2D" uid="uid://dvgktsf355mpq" path="res://materials_sprites_and_textures/textures/OfficeCeiling003_4K-JPG/OfficeCeiling003_4K_Color.jpg" id="1_nwm2p"]
+[ext_resource type="Texture2D" uid="uid://8ob0kfwd2jed" path="res://materials_sprites_and_textures/textures/OfficeCeiling003_4K-JPG/OfficeCeiling003_4K_Emission.jpg" id="2_vxysq"]
+[ext_resource type="Texture2D" uid="uid://dy8n4ydfpsrs8" path="res://materials_sprites_and_textures/textures/OfficeCeiling003_4K-JPG/OfficeCeiling003_4K_Metalness.jpg" id="3_vxysq"]
+[ext_resource type="Texture2D" uid="uid://d3eld6g1wajf0" path="res://materials_sprites_and_textures/textures/OfficeCeiling003_4K-JPG/OfficeCeiling003_4K_Roughness.jpg" id="3_x3stp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ckmne"]
+albedo_texture = ExtResource("1_nwm2p")
+metallic = 1.0
+metallic_texture = ExtResource("3_vxysq")
+roughness_texture = ExtResource("3_x3stp")
+emission_enabled = true
+emission = Color(1, 0.8392157, 0.7490196, 1)
+emission_energy_multiplier = 3.0
+emission_operator = 1
+emission_texture = ExtResource("2_vxysq")
+uv1_offset = Vector3(0.18, 0.18, 0)
+
+[sub_resource type="QuadMesh" id="QuadMesh_go1gt"]
+material = SubResource("StandardMaterial3D_ckmne")
+size = Vector2(8, 8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nwm2p"]
+size = Vector3(8, 8, 0.02)
+
+[node name="ceiling" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+
+[node name="mesh_ceiling" type="MeshInstance3D" parent="."]
+mesh = SubResource("QuadMesh_go1gt")
+
+[node name="collider_ceiling" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1163626e-16, 0.00061035156)
+shape = SubResource("BoxShape3D_nwm2p")
+
+[node name="lights" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9214659, 1.9367149, 0.1)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9262419, -2.03214, 0.1)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0906487, 1.9232318, 0.1)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.057662, -2.067415, 0.1)
+light_energy = 2.0
+shadow_enabled = true

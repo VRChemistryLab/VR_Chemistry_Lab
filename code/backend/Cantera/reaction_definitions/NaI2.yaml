@@ -1,0 +1,55 @@
+units:
+  length: cm
+  time: s
+  quantity: mol
+  activation-energy: J/mol   
+
+
+phases:
+- name: gas
+  thermo: ideal-gas
+  kinetics: gas
+  reactions: none
+  species: [I2]
+
+- name: surface
+  thermo: ideal-surface
+  kinetics: surface
+  reactions: all
+  species: [Na, NaI]
+  site-density: 1e-3
+  adjacent-phases: [gas]
+
+
+species:
+- name: Na
+  composition: {Na: 1}
+  thermo:
+    model: constant-cp
+    cp0: 16.245   # J/(mol*K) #addDataHere
+    h0: 0.0 # kJ/mol    #addDataHere
+    s0: 51.455    # J/(mol*K) #addDataHere
+
+- name: NaI
+  composition: {Na: 1, I: 1}
+  thermo:
+    model: constant-cp
+    cp0: 53.806	   # J/(mol*K) #addDataHere
+    h0: 5.403	   # kJ/mol    #addDataHere
+    s0: 114.077  # J/(mol*K) #addDataHere
+
+- name: I2
+  composition: {I: 2}
+  thermo:
+    model: constant-cp
+    cp0: 37.256  # J/(mol*K) #addDataHere
+    h0: 3.778		  # kJ/mol    #addDataHere
+    s0: 271.582	   # J/(mol*K) #addDataHere
+
+
+reactions:
+- equation: 2 Na + I2 <=> 2 NaI
+  rate-constant:
+    A: 1.0e8
+    b: 0.0
+    Ea: 1.0e4

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccb2wui2lrpym"]
+
+[ext_resource type="PackedScene" uid="uid://ce7vysyvondf8" path="res://addons/godot-xr-tools/objects/snap_zone.tscn" id="1_cf8ac"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_4uvlf"]
+resource_local_to_scene = true
+radius = 0.04
+
+[node name="chemicals snap zone" instance=ExtResource("1_cf8ac")]
+grab_distance = 0.04
+snap_mode = 1
+snap_require = "chemical"
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("SphereShape3D_4uvlf")

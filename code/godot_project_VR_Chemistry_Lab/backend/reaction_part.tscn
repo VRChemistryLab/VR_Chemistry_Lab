@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6nwmsqhyq4r8"]
+
+[ext_resource type="Script" uid="uid://dl8hwajwmpkr3" path="res://scripts/backend_scripts/reaction_part.gd" id="1_dt6cd"]
+[ext_resource type="Script" uid="uid://crcyvevwd6c74" path="res://scripts/backend_scripts/internal_state.gd" id="2_u3v3x"]
+
+[node name="reactionPart" type="Node3D"]
+script = ExtResource("1_dt6cd")
+
+[node name="InternalState" type="Node" parent="."]
+script = ExtResource("2_u3v3x")

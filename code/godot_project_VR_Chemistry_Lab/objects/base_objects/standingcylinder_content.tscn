@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi13v6fut82kf"]
+
+[ext_resource type="PackedScene" uid="uid://c6nwmsqhyq4r8" path="res://backend/reaction_part.tscn" id="1_rhvph"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bbt8x"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.49411765)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_saiqj"]
+material = SubResource("StandardMaterial3D_bbt8x")
+top_radius = 0.038
+bottom_radius = 0.038
+height = 0.37
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l4ngj"]
+height = 0.37
+radius = 0.035
+
+[node name="standingcylinder_content" type="Node3D"]
+
+[node name="reactionPart" parent="." instance=ExtResource("1_rhvph")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20858645, 0)
+mesh = SubResource("CylinderMesh_saiqj")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 0.209, 0)
+shape = SubResource("CylinderShape3D_l4ngj")

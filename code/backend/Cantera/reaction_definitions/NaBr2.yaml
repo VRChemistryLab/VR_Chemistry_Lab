@@ -1,0 +1,55 @@
+units:
+  length: cm
+  time: s
+  quantity: mol
+  activation-energy: J/mol   
+
+
+phases:
+- name: gas
+  thermo: ideal-gas
+  kinetics: gas
+  reactions: none
+  species: [Br2]
+
+- name: surface
+  thermo: ideal-surface
+  kinetics: surface
+  reactions: all
+  species: [Na, NaBr]
+  site-density: 1e-3
+  adjacent-phases: [gas]
+
+
+species:
+- name: Na
+  composition: {Na: 1}
+  thermo:
+    model: constant-cp
+    cp0: 16.245     # J/(mol*K) c from janaf for 400K but cp0=0.5*c weil effektiv nur oberfläche erhitzt werden kann
+    h0: 0.0         # kJ/mol from janaf
+    s0: 51.455      # J/(mol*K) c from janaf
+
+- name: NaBr
+  composition: {Na: 1, Br: 1}
+  thermo:
+    model: constant-cp
+    cp0: 53.45    # J/(mol*K) from janaf for 400K
+    h0: -361414.0 # J/mol from janaf for room temperature
+    s0: 86.818    # J/(mol*K) c from janaf  for room temperature
+
+- name: Br2
+  composition: {Br: 2}
+  thermo:
+    model: constant-cp
+    cp0: 36.723   # J/(mol*K) from janaf for 400K
+    h0: 30910.0 	# J/mol from janaf for room temperature
+    s0: 245.394   # J/(mol*K) c from janaf  for room temperature
+
+
+reactions:
+- equation: 2 Na + Br2 <=> 2 NaBr
+  rate-constant:
+    A: 1.0e8
+    b: 0.0
+    Ea: 1.0e4

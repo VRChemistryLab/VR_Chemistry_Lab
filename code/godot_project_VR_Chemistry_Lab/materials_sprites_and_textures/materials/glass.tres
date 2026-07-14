@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://coxbtlpyqu0uw"]
+
+[resource]
+resource_local_to_scene = true
+resource_name = "Solid - 25%"
+transparency = 4
+cull_mode = 2
+albedo_color = Color(0.603773, 0.6625926, 0.690411, 0.39215687)
+roughness = 0.15873015

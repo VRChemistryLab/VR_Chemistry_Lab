@@ -1,0 +1,55 @@
+units:
+  length: cm
+  time: s
+  quantity: mol
+  activation-energy: J/mol   
+
+
+phases:
+- name: gas
+  thermo: ideal-gas
+  kinetics: gas
+  reactions: none
+  species: [Reactant2]
+
+- name: surface
+  thermo: ideal-surface
+  kinetics: surface
+  reactions: all
+  species: [Reactant1, Product]
+  site-density: 1e-3
+  adjacent-phases: [gas]
+
+
+species:
+- name: Reactant1
+  composition: {Reactant1: 1}
+  thermo:
+    model: constant-cp
+    cp0:    # J/(mol*K) #addDataHere
+    h0:     # kJ/mol    #addDataHere
+    s0:     # J/(mol*K) #addDataHere
+
+- name: Product
+  composition: {Reactant1: 1, Reactant2: 1}
+  thermo:
+    model: constant-cp
+    cp0:    # J/(mol*K) #addDataHere
+    h0:     # kJ/mol    #addDataHere
+    s0:     # J/(mol*K) #addDataHere
+
+- name: Reactant2
+  composition: {Reactant2: 2}
+  thermo:
+    model: constant-cp
+    cp0:    # J/(mol*K) #addDataHere
+    h0:     # kJ/mol    #addDataHere
+    s0:     # J/(mol*K) #addDataHere
+
+
+reactions:
+- equation: 2 Reactant1 + Reactant2 <=> 2 Product
+  rate-constant:
+    A:                  #addDataHere
+    b:                  #addDataHere
+    Ea:                 #addDataHere

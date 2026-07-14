@@ -1,0 +1,27 @@
+# Godot 4+ specific ignores
+.godot/
+.nomedia
+
+# Godot-specific ignores
+.import/
+export.cfg
+export_credentials.cfg
+*.tmp
+
+# Imported translations (automatically generated from CSV files)
+*.translation
+
+# Mono-specific ignores
+.mono/
+data_*/
+mono_crash.*.json
+
+#template und so was
+/android
+
+#ignore because to big to push anyways:
+#gimp files
+*.xcf
+
+#builds
+code/builds

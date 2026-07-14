@@ -1,0 +1,108 @@
+[gd_scene load_steps=18 format=3 uid="uid://cyckb733fh7yd"]
+
+[ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cbqq3naggssih" path="res://objects/player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://h1nafrpkc522" path="res://objects/room/ceiling.tscn" id="3_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://b4223gdpiykir" path="res://objects/room/wall.tscn" id="4_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://d3edtnppy2a84" path="res://objects/room/floor.tscn" id="5_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://7kip4turgqqc" path="res://objects/furniture/decoration/door.tscn" id="6_muem4"]
+[ext_resource type="PackedScene" uid="uid://b5ak0ewiynu72" path="res://objects/furniture/workstation/table.tscn" id="7_dp3eg"]
+[ext_resource type="PackedScene" uid="uid://bx5niaowefstp" path="res://objects/furniture/workstation/tooltable.tscn" id="8_0ld40"]
+[ext_resource type="PackedScene" uid="uid://w1apgb4gdpmb" path="res://objects/furniture/decoration/storage1.tscn" id="9_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://bxrq8xonbhx1h" path="res://objects/furniture/decoration/storage2.tscn" id="10_yc10j"]
+[ext_resource type="PackedScene" uid="uid://2vekj3nigvgt" path="res://objects/furniture/decoration/chalkboard.tscn" id="11_jscy8"]
+[ext_resource type="PackedScene" uid="uid://cikx2bgqw1kxp" path="res://objects/furniture/decoration/corkboard.tscn" id="12_pm3ni"]
+[ext_resource type="PackedScene" uid="uid://n7i5tya3muaw" path="res://objects/furniture/decoration/corkboard_poster.tscn" id="13_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://cvsy360twicg0" path="res://objects/furniture/decoration/corkboard_periodic_table.tscn" id="13_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://dfgrta37mcbue" path="res://objects/furniture/decoration/trolley1.tscn" id="13_y6deb"]
+[ext_resource type="PackedScene" uid="uid://b7t8jm2rj2wfx" path="res://objects/furniture/decoration/trolley2.tscn" id="14_og1vs"]
+
+[sub_resource type="Environment" id="Environment_84dwk"]
+ambient_light_color = Color(1, 1, 1, 1)
+glow_enabled = true
+glow_blend_mode = 4
+glow_hdr_threshold = 0.75
+
+[node name="main" type="Node3D"]
+
+[node name="StartXR" parent="." instance=ExtResource("1_ig7tw")]
+
+[node name="player" parent="." instance=ExtResource("2_0xm2m")]
+
+[node name="room" type="Node3D" parent="."]
+
+[node name="ceiling" parent="room" instance=ExtResource("3_a8y0u")]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.5, 0)
+
+[node name="wall" parent="room" instance=ExtResource("4_jkv2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="wall2" parent="room" instance=ExtResource("4_jkv2x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4, 0, 0)
+
+[node name="wall3" parent="room" instance=ExtResource("4_jkv2x")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 4)
+
+[node name="wall4" parent="room" instance=ExtResource("4_jkv2x")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4, 0, 0)
+
+[node name="floor" parent="room" instance=ExtResource("5_jbj1t")]
+
+[node name="workstation" type="Node3D" parent="."]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -2)
+
+[node name="table" parent="workstation" instance=ExtResource("7_dp3eg")]
+transform = Transform3D(1.3113416e-07, 0, 1, 0, 1, 0, -1, 0, 1.3113416e-07, 4, 0, -1.497)
+
+[node name="tooltable" parent="workstation" instance=ExtResource("8_0ld40")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.801, -0.01, -2.306)
+
+[node name="decorations" type="Node3D" parent="."]
+
+[node name="storage1" parent="decorations" instance=ExtResource("9_gqmmt")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7, 0, 3.433)
+
+[node name="storage2" parent="decorations" instance=ExtResource("10_yc10j")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7, 0, 2.286)
+
+[node name="storage3" parent="decorations" instance=ExtResource("10_yc10j")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.2195479, 0, 3.7)
+
+[node name="storage4" parent="decorations" instance=ExtResource("9_gqmmt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.055, 0, 3.7)
+
+[node name="storage5" parent="decorations" instance=ExtResource("10_yc10j")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.3826823, 0, 3.7)
+
+[node name="storage6" parent="decorations" instance=ExtResource("10_yc10j")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.23, 0, -3.7)
+
+[node name="storage7" parent="decorations" instance=ExtResource("9_gqmmt")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.32, 0, -3.7)
+
+[node name="chalkboard" parent="decorations" instance=ExtResource("11_jscy8")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 1.557, -3.99)
+
+[node name="corkboard" parent="decorations" instance=ExtResource("12_pm3ni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99, 1.4, 2.5)
+
+[node name="corkboard_periodic_table" parent="decorations" instance=ExtResource("13_jkv2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99, 1.4, 0.25)
+
+[node name="corkboard2" parent="decorations" instance=ExtResource("12_pm3ni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.99, 1.4, -2)
+
+[node name="corkboard_poster" parent="decorations" instance=ExtResource("13_jbj1t")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 3.99, 1.4, 0)
+
+[node name="trolley1" parent="decorations" instance=ExtResource("13_y6deb")]
+transform = Transform3D(0.9969078, 0, 0.078580886, 0, 1, 0, -0.078580886, 0, 0.9969078, 3.7, -0.01, 1.24)
+
+[node name="trolley2" parent="decorations" instance=ExtResource("14_og1vs")]
+transform = Transform3D(0.7258067, 0, 0.6878987, 0, 1, 0, -0.6878987, 0, 0.7258067, -3.391012, -0.01, 3.0463564)
+
+[node name="door" parent="decorations" instance=ExtResource("6_muem4")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -2)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_84dwk")

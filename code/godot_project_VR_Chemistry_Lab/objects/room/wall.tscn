@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4223gdpiykir"]
+
+[ext_resource type="Texture2D" uid="uid://csdrng0044sw1" path="res://materials_sprites_and_textures/textures/Wallpaper002A_4K-JPG/Wallpaper002A_4K_Color.jpg" id="1_pk3f6"]
+[ext_resource type="Texture2D" uid="uid://btiv12hhwkqqn" path="res://materials_sprites_and_textures/textures/Wallpaper002A_4K-JPG/Wallpaper002A_4K_NormalGL.jpg" id="2_8ab52"]
+[ext_resource type="Texture2D" uid="uid://c5m1fvp40mssa" path="res://materials_sprites_and_textures/textures/Wallpaper002A_4K-JPG/Wallpaper002A_4K_Roughness.jpg" id="2_pk3f6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0laox"]
+albedo_texture = ExtResource("1_pk3f6")
+roughness_texture = ExtResource("2_pk3f6")
+normal_enabled = true
+normal_scale = 0.8
+normal_texture = ExtResource("2_8ab52")
+uv1_scale = Vector3(0.8, 0.8, 0.8)
+uv1_triplanar = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_rabsj"]
+material = SubResource("StandardMaterial3D_0laox")
+size = Vector2(8, 2.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cx7ev"]
+size = Vector3(8, 2.5, 0.02)
+
+[node name="wall" type="StaticBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+mesh = SubResource("QuadMesh_rabsj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)
+shape = SubResource("BoxShape3D_cx7ev")

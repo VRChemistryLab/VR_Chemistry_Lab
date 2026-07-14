@@ -1,0 +1,35 @@
+[gd_scene load_steps=8 format=3 uid="uid://0783xki0nep3"]
+
+[ext_resource type="Script" uid="uid://c0fq141fo1mtw" path="res://scripts/backend_scripts/data_synchronizer.gd" id="1_by4kq"]
+[ext_resource type="Script" uid="uid://0317doy0a40g" path="res://scripts/backend_scripts/element_instantiator.gd" id="3_jip0v"]
+[ext_resource type="Script" uid="uid://kc5uou751psm" path="res://scripts/backend_scripts/reaction_group_manager.gd" id="4_mkds2"]
+[ext_resource type="Script" uid="uid://cbc30rdwowq1j" path="res://scripts/backend_scripts/message_router.gd" id="5_jloge"]
+[ext_resource type="PackedScene" uid="uid://b1h5o3ndvh35x" path="res://backend/json_parser.tscn" id="6_6dpbi"]
+[ext_resource type="Script" uid="uid://bupxj5in33jlr" path="res://scripts/backend_scripts/json_writer.gd" id="7_3mjdo"]
+[ext_resource type="PackedScene" uid="uid://bcadrxcoy7tft" path="res://backend/webSocket.tscn" id="8_t723y"]
+
+[node name="DataSynchronizer" type="Node"]
+script = ExtResource("1_by4kq")
+printMessagesReceivedFromServer = true
+printMessagesSendToServer = true
+
+[node name="ElementInstantiator" type="Node" parent="."]
+script = ExtResource("3_jip0v")
+
+[node name="reactionGroupManager" type="Node" parent="."]
+script = ExtResource("4_mkds2")
+
+[node name="messageRouter" type="Node" parent="."]
+script = ExtResource("5_jloge")
+
+[node name="json parser" parent="." instance=ExtResource("6_6dpbi")]
+
+[node name="json writer" type="Node" parent="."]
+script = ExtResource("7_3mjdo")
+
+[node name="Engines" type="Node" parent="."]
+
+[node name="WebSocket Reaktoro" parent="Engines" instance=ExtResource("8_t723y")]
+host = "localhost:50506"
+
+[node name="WebSocket Cantera" parent="Engines" instance=ExtResource("8_t723y")]

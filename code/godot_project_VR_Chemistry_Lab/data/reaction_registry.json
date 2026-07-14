@@ -1,0 +1,88 @@
+{
+  "entries": [
+	{
+	  "reactionKey": "Aqueous:",
+	  "isPrefix": true,
+	  "engineId": "WebSocket Reaktoro",
+	  "reactionStrength": 0.0
+	},
+	{
+	  "reactionKey": "Br2",
+	  "isPrefix": false,
+	  "engineId": "WebSocket Cantera",
+	  "reactionStrength": 0.0,
+	  "reactants": [],
+	  "products": []
+	},
+	{
+	  "reactionKey": "Na",
+	  "isPrefix": false,
+	  "engineId": "WebSocket Cantera",
+	  "reactionStrength": 0.0,
+	  "reactants": [],
+	  "products": []
+	},
+	{
+	  "reactionKey": "NaBr2",
+	  "isPrefix": false,
+	  "engineId": "WebSocket Cantera",
+	  "reactionStrength": 0.4,
+	  "reactants": [
+		"Na",
+        "Br2"
+	  ],
+	  "products": [
+        "NaBr"
+	  ]
+	},
+	{
+	  "reactionKey": "NaCl2",
+	  "isPrefix": false,
+	  "engineId": "WebSocket Cantera",
+	  "reactionStrength": 1.0,
+	  "reactants": [
+		"Na",
+        "Cl2"
+	  ],
+	  "products": [
+        "NaCl"
+	  ]
+	},
+	{
+	  "reactionKey": "NaI2",
+	  "isPrefix": false,
+	  "engineId": "WebSocket Cantera",
+	  "reactionStrength": 0.1,
+	  "reactants": [
+		"Na",
+        "I2"
+	  ],
+	  "products": [
+        "NaI"
+	  ]
+	}
+  ],
+  "aqueousReagents": [
+	"BaCl2",
+	"CO2",
+	"Ca(OH)2",
+	"CaCO3",
+	"CaCl2",
+	"Cu",
+	"CuSO4",
+	"Fe",
+	"FeCl2",
+	"FeCl3",
+	"H2SO4",
+	"H3PO4",
+	"HCl",
+	"HNO3",
+	"KOH",
+	"NH3",
+	"Na2CO3",
+	"Na2SO4",
+	"NaCl",
+	"NaOH",
+    "Pb(NO3)2"
+  ]
+}

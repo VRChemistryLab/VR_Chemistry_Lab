@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvsy360twicg0"]
+
+[ext_resource type="PackedScene" uid="uid://cikx2bgqw1kxp" path="res://objects/furniture/decoration/corkboard.tscn" id="1_hdwn2"]
+[ext_resource type="Texture2D" uid="uid://1sylrhi3m7m8" path="res://materials_sprites_and_textures/sprites/posters/poster_periodic_system.png" id="2_6k7gs"]
+
+[node name="corkboard_periodic_table" instance=ExtResource("1_hdwn2")]
+
+[node name="sprite_periodic_table" type="Sprite3D" parent="mesh_board" index="0"]
+transform = Transform3D(-3.2616035e-07, 0, 10.000003, 0, 0.1045645, 0, -0.07461677, 0, -4.371139e-09, 1.0000004, 0, 0)
+shaded = true
+texture = ExtResource("2_6k7gs")

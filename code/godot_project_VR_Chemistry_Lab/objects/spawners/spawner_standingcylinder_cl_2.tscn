@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://c881im4qqim8a"]
+
+[ext_resource type="Script" uid="uid://cqhohof2h452n" path="res://scripts/spawner.gd" id="1_vs2lc"]
+[ext_resource type="PackedScene" uid="uid://1ux8q4dw2vb8" path="res://objects/chemicals_stored/standingcylinder_cl2.tscn" id="2_jyics"]
+[ext_resource type="PackedScene" uid="uid://b6rxpo50rcy07" path="res://objects/chemicals_signs/sign_cl2.tscn" id="3_he03o"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jyics"]
+albedo_color = Color(0.31362072, 0.2944512, 0.33281192, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_he03o"]
+material = SubResource("StandardMaterial3D_jyics")
+top_radius = 0.068
+bottom_radius = 0.068
+height = 0.01
+radial_segments = 12
+
+[node name="spawner_standingcylinder_Cl2" type="Node3D"]
+script = ExtResource("1_vs2lc")
+spawnedObject = ExtResource("2_jyics")
+
+[node name="silhouette_standingcylinder" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_he03o")
+
+[node name="label" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.092868194, 0.024063013, 0)
+
+[node name="sign_cl2" parent="label" instance=ExtResource("3_he03o")]

@@ -1,0 +1,20 @@
+units:
+  length: cm
+  time: s
+  quantity: mol
+  activation-energy: J/mol   
+
+phases:
+- name: gas
+  species: [Na]
+  thermo: ideal-gas
+
+species:
+- name: Na
+  composition: {Na: 1}
+  thermo:
+    model: constant-cp
+    cp0: 16.245      # J/(mol*K) c from janaf for 400K but cp0=0.5*c weil effektiv nur oberfläche erhitzt werden kann
+    h0: 0.0         # kJ/mol from janaf
+    s0: 51.455      # J/(mol*K) c from janaf
+

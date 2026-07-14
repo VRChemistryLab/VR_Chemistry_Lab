@@ -1,0 +1,78 @@
+[gd_scene load_steps=17 format=3 uid="uid://btmygr362tfyk"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_h576f"]
+[ext_resource type="Material" uid="uid://coxbtlpyqu0uw" path="res://materials_sprites_and_textures/materials/glass.tres" id="2_3vou1"]
+[ext_resource type="PackedScene" uid="uid://ctw7nbntd5pcj" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_right.tscn" id="3_qthcv"]
+[ext_resource type="Script" uid="uid://dvobm6vcfnqe8" path="res://addons/godot-xr-tools/hands/poses/hand_pose_settings.gd" id="4_11hoa"]
+[ext_resource type="Animation" uid="uid://r8hleealhrqt" path="res://addons/godot-xr-tools/hands/animations/right/Grip 2.res" id="4_qthcv"]
+[ext_resource type="PackedScene" uid="uid://c25yxb0vt53vc" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_hand_left.tscn" id="5_2wgv7"]
+[ext_resource type="Animation" uid="uid://di384xtde8ydf" path="res://addons/godot-xr-tools/hands/animations/left/Grip 2.res" id="7_dmhy5"]
+[ext_resource type="PackedScene" uid="uid://dh8grd7s3n8kg" path="res://addons/godot-xr-tools/objects/grab_points/grab_point_snap.tscn" id="8_5m2al"]
+[ext_resource type="Script" uid="uid://0b7wkxi4vymb" path="res://addons/godot-xr-tools/objects/highlight/highlight_visible.gd" id="9_wep3x"]
+[ext_resource type="Material" uid="uid://bkp3s8j1olvy7" path="res://materials_sprites_and_textures/materials/glasshighlight.tres" id="10_5m2al"]
+[ext_resource type="PackedScene" uid="uid://degx841642pxw" path="res://objects/audio_nodes/audio_collision_glass.tscn" id="11_1j58b"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_3tcxo"]
+height = 0.004
+radius = 0.045
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rcl06"]
+material = ExtResource("2_3vou1")
+top_radius = 0.045
+bottom_radius = 0.045
+height = 0.004
+radial_segments = 12
+
+[sub_resource type="Resource" id="Resource_dmhy5"]
+script = ExtResource("4_11hoa")
+open_pose = ExtResource("4_qthcv")
+closed_pose = ExtResource("4_qthcv")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="Resource" id="Resource_3vou1"]
+script = ExtResource("4_11hoa")
+open_pose = ExtResource("7_dmhy5")
+closed_pose = ExtResource("7_dmhy5")
+metadata/_custom_type_script = "uid://dvobm6vcfnqe8"
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_wep3x"]
+material = ExtResource("10_5m2al")
+top_radius = 0.045
+bottom_radius = 0.045
+height = 0.004
+radial_segments = 12
+
+[node name="standingcylinder_cap" groups=["dontCollideWithStandingCylinder", "standingcylinder_cap"] instance=ExtResource("1_h576f")]
+top_level = true
+continuous_cd = true
+contact_monitor = true
+max_contacts_reported = 100
+picked_up_layer = 65536
+second_hand_grab = 0
+
+[node name="CollisionShape3D" parent="." index="0"]
+shape = SubResource("CylinderShape3D_3tcxo")
+
+[node name="mesh_cap" type="MeshInstance3D" parent="." index="1"]
+mesh = SubResource("CylinderMesh_rcl06")
+
+[node name="GrabPointHandRight" parent="." index="2" instance=ExtResource("3_qthcv")]
+transform = Transform3D(0.98445165, 0.1468945, -0.09631817, -0.13244139, 0.98091817, 0.14233379, 0.1153883, -0.1273642, 0.98512137, 0.025947332, -0.004837919, -0.033635408)
+hand_pose = SubResource("Resource_dmhy5")
+
+[node name="GrabPointHandLeft" parent="." index="3" instance=ExtResource("5_2wgv7")]
+transform = Transform3D(0.98438877, -0.14713937, 0.09658524, 0.13261636, 0.98085165, 0.14262894, -0.11572212, -0.12759355, 0.98505247, -0.026, -0.005, -0.034)
+hand_pose = SubResource("Resource_3vou1")
+
+[node name="GrabPointSnap" parent="." index="4" instance=ExtResource("8_5m2al")]
+
+[node name="XRToolsHighlightVisible" type="Node3D" parent="." index="5"]
+script = ExtResource("9_wep3x")
+metadata/_custom_type_script = "uid://0b7wkxi4vymb"
+
+[node name="mesh_highlight" type="MeshInstance3D" parent="XRToolsHighlightVisible" index="0"]
+mesh = SubResource("CylinderMesh_wep3x")
+
+[node name="audio_collision_glass" parent="." index="6" instance=ExtResource("11_1j58b")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

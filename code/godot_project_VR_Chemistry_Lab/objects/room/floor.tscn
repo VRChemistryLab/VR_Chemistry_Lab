@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3edtnppy2a84"]
+
+[ext_resource type="Texture2D" uid="uid://5ujclet1384e" path="res://materials_sprites_and_textures/textures/ceramic_tiling_32-4K/4K-tiling_32_basecolor.jpg" id="1_jxhxk"]
+[ext_resource type="Texture2D" uid="uid://cio5o76e5bu0p" path="res://materials_sprites_and_textures/textures/ceramic_tiling_32-4K/4K-tiling_32_normal.jpg" id="2_lrgsn"]
+[ext_resource type="Texture2D" uid="uid://c8be3krilniq0" path="res://materials_sprites_and_textures/textures/ceramic_tiling_32-4K/4K-tiling_32_roughness.jpg" id="2_tnb6g"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lrgsn"]
+albedo_color = Color(0.80457026, 0.859125, 0.9410939, 1)
+albedo_texture = ExtResource("1_jxhxk")
+roughness_texture = ExtResource("2_tnb6g")
+normal_enabled = true
+normal_scale = 8.0
+normal_texture = ExtResource("2_lrgsn")
+uv1_scale = Vector3(8, 8, 8)
+
+[sub_resource type="QuadMesh" id="QuadMesh_iqa73"]
+material = SubResource("StandardMaterial3D_lrgsn")
+size = Vector2(8, 8)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gri0i"]
+size = Vector3(8, 0.02, 8)
+
+[node name="floor" type="StaticBody3D" groups=["floor"]]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_iqa73")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_gri0i")

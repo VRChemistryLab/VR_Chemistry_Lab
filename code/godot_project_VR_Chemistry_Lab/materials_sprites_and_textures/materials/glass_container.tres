@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" load_steps=0 format=3 uid="uid://bf6h8wsdchmlr"]
+
+[resource]
+resource_name = "Solid - 25%"
+transparency = 4
+cull_mode = 1
+albedo_color = Color(0.23921573, 0.13333336, 0.06666669, 1)
+roughness = 0.15873015

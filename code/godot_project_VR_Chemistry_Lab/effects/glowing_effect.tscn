@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckaujch2eombv"]
+
+[ext_resource type="Script" uid="uid://bc2df5m2i7ldp" path="res://scripts/glowing_effect.gd" id="1_6f15a"]
+
+[node name="glowingEffect" type="OmniLight3D"]
+light_color = Color(0.98, 0.8911467, 0.3136, 1)
+light_energy = 0.03
+light_indirect_energy = 16.0
+light_volumetric_fog_energy = 16.0
+script = ExtResource("1_6f15a")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

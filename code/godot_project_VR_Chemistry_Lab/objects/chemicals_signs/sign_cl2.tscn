@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6rxpo50rcy07"]
+
+[ext_resource type="PackedScene" uid="uid://bqdpc3aes66v4" path="res://objects/base_objects/sign.tscn" id="1_def0x"]
+[ext_resource type="Texture2D" uid="uid://bdlry5nqm08w3" path="res://materials_sprites_and_textures/sprites/labels/label_Cl2.png" id="2_hkn6a"]
+
+[node name="sign_cl2" instance=ExtResource("1_def0x")]
+
+[node name="label" parent="." index="3"]
+texture = ExtResource("2_hkn6a")

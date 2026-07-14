@@ -1,0 +1,20 @@
+[gd_scene load_steps=7 format=3 uid="uid://degx841642pxw"]
+
+[ext_resource type="PackedScene" uid="uid://dbd40nu3on6wp" path="res://objects/audio_nodes/audio_collision.tscn" id="1_b32ln"]
+[ext_resource type="AudioStream" uid="uid://bsuimunluhnwn" path="res://sounds/glass/glass.mp3" id="2_yebjr"]
+[ext_resource type="AudioStream" uid="uid://brwcqpq7ex4tu" path="res://sounds/glass/glass1.mp3" id="3_ianuc"]
+[ext_resource type="AudioStream" uid="uid://b38nve0m5skqh" path="res://sounds/glass/glass2.mp3" id="4_5px53"]
+[ext_resource type="AudioStream" uid="uid://c0l43d0suut7g" path="res://sounds/glass/glass3.mp3" id="5_cn0xe"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mb7c4"]
+playback_mode = 1
+random_pitch = 1.3
+streams_count = 4
+stream_0/stream = ExtResource("2_yebjr")
+stream_1/stream = ExtResource("3_ianuc")
+stream_1/weight = 0.5
+stream_2/stream = ExtResource("4_5px53")
+stream_3/stream = ExtResource("5_cn0xe")
+
+[node name="audio_collision_glass" instance=ExtResource("1_b32ln")]
+stream = SubResource("AudioStreamRandomizer_mb7c4")

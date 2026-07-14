@@ -1,0 +1,14 @@
+# Hand-curated, rough glow strength per reaction - the one piece of data
+# that generate_reaction_registry.py can't discover automatically.
+#
+# Key: the same reaction id used in the filename (simulation<Id>.py -> "Id")
+# for Cantera reactions, or the whatReaction prefix (e.g. "Aqueous:") for
+# generic engines like Reaktoro.
+# Value: rough intensity for the glow effect. 1.0 = reference/full
+# intensity, values > 1.0 are fine for especially violent reactions.
+# Reactions not listed here simply don't glow (defaults to 0.0).
+
+NaI2: 0.1
+NaBr2: 0.4
+NaCl2: 1.0
+"Aqueous:": 0.0

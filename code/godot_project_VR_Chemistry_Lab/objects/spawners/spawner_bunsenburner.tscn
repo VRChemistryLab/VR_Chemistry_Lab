@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://np7kfwedejdl"]
+
+[ext_resource type="Script" uid="uid://cqhohof2h452n" path="res://scripts/spawner.gd" id="1_eac5d"]
+[ext_resource type="PackedScene" uid="uid://c4yyosjgbpbib" path="res://objects/tools/bunsenburner.tscn" id="2_gfo0f"]
+[ext_resource type="Material" uid="uid://dwgyx7ykg0oa3" path="res://materials_sprites_and_textures/materials/spawner_silhouette.tres" id="3_gfo0f"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gfo0f"]
+material = ExtResource("3_gfo0f")
+top_radius = 0.072
+bottom_radius = 0.072
+height = 0.01
+radial_segments = 12
+
+[node name="spawner_bunsenburner" type="Node3D"]
+script = ExtResource("1_eac5d")
+spawnedObject = ExtResource("2_gfo0f")
+
+[node name="silhouette_bunsenburner" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.02, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_gfo0f")

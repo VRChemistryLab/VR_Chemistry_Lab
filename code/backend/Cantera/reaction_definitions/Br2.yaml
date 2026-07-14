@@ -1,0 +1,20 @@
+units:
+  length: cm
+  time: s
+  quantity: mol
+  activation-energy: J/mol   
+
+phases:
+- name: gas
+  species: [Br2]
+  thermo: ideal-gas
+
+species:
+- name: Br2
+  composition: {Br: 2}
+  thermo:
+    model: constant-cp
+    cp0: 36.723   # J/(mol*K) from janaf for 400K
+    h0: 30910.0 	  # J/mol from janaf for room temperature
+    s0: 245.394   # J/(mol*K) c from janaf  for room temperature
+

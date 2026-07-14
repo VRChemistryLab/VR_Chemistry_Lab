@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://be8at0q0e4d7u"]
+
+[ext_resource type="PackedScene" uid="uid://decxvcsp41mqe" path="res://objects/base_objects/standingcylinder.tscn" id="1_giju8"]
+[ext_resource type="PackedScene" uid="uid://c6nwmsqhyq4r8" path="res://backend/reaction_part.tscn" id="2_84ibo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_giju8"]
+transparency = 1
+albedo_color = Color(0.33588395, 0.07423469, 0.30830652, 0.6862745)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_84ibo"]
+material = SubResource("StandardMaterial3D_giju8")
+top_radius = 0.038
+bottom_radius = 0.038
+height = 0.37
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_l4ngj"]
+height = 0.37
+radius = 0.035
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_u55mw"]
+resource_local_to_scene = true
+radius = 0.04
+
+[node name="standingcylinder_i2" instance=ExtResource("1_giju8")]
+
+[node name="I2" type="Node3D" parent="." index="0"]
+
+[node name="reactionPart" parent="I2" index="0" instance=ExtResource("2_84ibo")]
+CHEMICAL_NAME = "I2"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="I2" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.20858645, 0)
+mesh = SubResource("CylinderMesh_84ibo")
+
+[node name="Area3D" type="Area3D" parent="I2" index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="I2/Area3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 0.209, 0)
+shape = SubResource("CylinderShape3D_l4ngj")
+
+[node name="CollisionShape3D" parent="snapzone_cap" index="0"]
+shape = SubResource("SphereShape3D_u55mw")

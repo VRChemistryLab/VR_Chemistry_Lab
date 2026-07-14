@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://ybvd1m7nvdeu"]
+
+[ext_resource type="Script" uid="uid://cqhohof2h452n" path="res://scripts/spawner.gd" id="1_3khni"]
+[ext_resource type="PackedScene" uid="uid://bin8e2tfva3me" path="res://objects/chemicals_stored/standingcylinder_br2.tscn" id="2_u0ni8"]
+[ext_resource type="Material" uid="uid://dwgyx7ykg0oa3" path="res://materials_sprites_and_textures/materials/spawner_silhouette.tres" id="3_u0ni8"]
+[ext_resource type="PackedScene" uid="uid://dpuk3b13shwos" path="res://objects/chemicals_signs/sign_br2.tscn" id="4_blp3v"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_u0ni8"]
+material = ExtResource("3_u0ni8")
+top_radius = 0.068
+bottom_radius = 0.068
+height = 0.01
+radial_segments = 12
+
+[node name="spawner_standingcylinder_br" type="Node3D"]
+script = ExtResource("1_3khni")
+spawnedObject = ExtResource("2_u0ni8")
+
+[node name="silhouette_standingcylinder" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_u0ni8")
+
+[node name="label" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.092868194, 0.024063013, 0)
+
+[node name="sign_br2" parent="label" instance=ExtResource("4_blp3v")]

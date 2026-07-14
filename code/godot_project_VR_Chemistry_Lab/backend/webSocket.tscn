@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcadrxcoy7tft"]
+
+[ext_resource type="Script" uid="uid://cvtswdcbb0hn6" path="res://addons/websocket/WebSocket.gd" id="1_g4joc"]
+[ext_resource type="Script" uid="uid://ds0gtelgmkcyt" path="res://scripts/backend_scripts/webSocketClient.gd" id="2_yhgpu"]
+
+[node name="WebSocket" type="Node"]
+script = ExtResource("1_g4joc")
+host = "localhost:50505"
+use_WSS = false
+autoconnect_mode = 1
+metadata/_custom_type_script = "uid://cvtswdcbb0hn6"
+
+[node name="WebSocketClient" type="Node" parent="."]
+script = ExtResource("2_yhgpu")

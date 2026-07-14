@@ -1,0 +1,452 @@
+[gd_scene load_steps=15 format=4 uid="uid://2vekj3nigvgt"]
+
+[ext_resource type="Material" uid="uid://cx0iuyejdhbwi" path="res://materials_sprites_and_textures/materials/chalkboard_frame.tres" id="2_nfy51"]
+[ext_resource type="Material" uid="uid://4uc8nkodcjsr" path="res://materials_sprites_and_textures/materials/chalkboard.tres" id="2_sxi46"]
+[ext_resource type="FontFile" uid="uid://ciwe2w2rlmyu" path="res://materials_sprites_and_textures/fonts/chawp.ttf" id="3_bc1n3"]
+[ext_resource type="Texture2D" uid="uid://oq03a5qc1bcc" path="res://materials_sprites_and_textures/sprites/control buttons/left_grip.PNG" id="4_68ibg"]
+[ext_resource type="Texture2D" uid="uid://dmkjed3xdk68n" path="res://materials_sprites_and_textures/sprites/control buttons/left_thumbstick.PNG" id="4_yflce"]
+[ext_resource type="Texture2D" uid="uid://d1r80gke3ta8g" path="res://materials_sprites_and_textures/sprites/control buttons/slash.PNG" id="5_0rngh"]
+[ext_resource type="Texture2D" uid="uid://crttkkv64bi1w" path="res://materials_sprites_and_textures/sprites/control buttons/right_grip.PNG" id="6_kebyh"]
+[ext_resource type="Texture2D" uid="uid://dxankf2jr73qo" path="res://materials_sprites_and_textures/sprites/control buttons/left_trigger.PNG" id="7_xwmni"]
+[ext_resource type="Texture2D" uid="uid://4qo54h8d805f" path="res://materials_sprites_and_textures/sprites/control buttons/right_trigger.PNG" id="8_phjp8"]
+[ext_resource type="Texture2D" uid="uid://c0kp0hgbqg7ot" path="res://materials_sprites_and_textures/sprites/control buttons/right_thumbstick.PNG" id="9_pf8cc"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_v7tdq"]
+_surfaces = [{
+"aabb": AABB(-1, -1, -0.98006976, 3.5, 2, 1.9601395),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAwAEAAIABAAAAAIABQADAAEABAAGAAAABQABAAcAAAAHAAEACAAGAAUACQAAAAYACQAGAAgACgAAAAkACgAHAAAACAALAAkACQALAAwACQAMAAoACAANAAsACgAMAA4ADwANAAgADwAHAAoADwAOAA0ACgAOAA8ADwAFAAcACAAFAA8A"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("SJL//wAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAAAAAAAAAAAAEiSAAD//wAASJIAAAAAAABIkv////8AAP//ZgbtAwAA//+Y+e0DAAD//5j5EfwAACRJmPntAwAAJEmY+RH8AAAkSWYG7QMAACRJZgYR/AAA//9mBhH8AAA=")
+}, {
+"aabb": AABB(-0.97023964, -1.2653071, -4.898854, 17.461416, 2.265307, 3.920278),
+"format": 34359742465,
+"index_count": 234,
+"index_data": PackedByteArray("FwAGABgAFwACAAYABgACABkAAQACABcAAQAZAAIABgAZABoAGAAGABoAGQAbABoAGAAaAAUAGQAcABsAAQAcABkAGgAbAAcAGgAHAAUAHAAMABsADAAHABsAHAAdAAwAAwAdABwAAQADABwABQADAAEABQAHAAMABAAFAAEABwAHAAMAHQAKAAwABwAMAAoACgAMAAoABwADAAMACgAHAAoAAwALAB0AHQALAAoAAwALAAMACwADAAsACgAKAAsACwADAB4AHgADAAcACgALAAsACwALAAoACwAKAAoACwAfAAoABwAKAB8ACwAeAAkACwAJAB8ACwAJAAsACAAJAB4ACAAfAAkAHgAHAAgABwAfAAgABwAIAAcAIAAFAAQAIAAYAAUAIQAYACAAIQAXABgAIQAgAA0AAAAXACEAAAABABcABAABAAAAIQANAA4AAAAhAA4AIAAiAA0AIAAEACIAIgAOAA0AAAAOACMAIgAjAA4AEQAEAAAADwAiAAQADwAEABEAEAAiAA8AEAAjACIAEQAVAA8ADwAVABMADwATABAAEQAWABUAEAATABQAEgAWABEAEgAjABAAEgAUABYAEAAUABIAEgAAACMAEQAAABIA"),
+"lods": [0.13026856, PackedByteArray("AAABAAIAAQADAAIABAABAAAABQADAAEABAAFAAEABgAFAAQABQAHAAMABgAHAAUAAwAHAAgACAAJAAMABwAKAAgACAAKAAkACwADAAkACwAJAAoAAwALAAIABwAMAAoACwAKAAwABgAMAAcAAgALAAwAAgAMAAYAAgAGAA0AAgANAA4AAAACAA4ABgAPAA0ADwAOAA0ABgAEAA8AAAAOABAADwAQAA4AEQAEAAAADwAEABEAEgAAABAAEQAAABIADwATABAAEAATABQAEAAUABIADwAVABMAEQAVAA8AEgAUABYAEQAWABUAEgAWABEA")],
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("Ls+DP///f7/yg3q/Ls+DP2s2nb/yg3q/oGF4v5X1ob/yg3q/CqNnQWs2nb/yg3q/Ls+DP///f79pw5zALs+DP2s2nb9pw5zAoGF4v5X1ob9pw5zACqNnQWs2nb9pw5zACqNvQd7Nmr9pw5zA3Nt/Qd7Nmr/yg3q/7u2DQWs2nb9pw5zA7u2DQWs2nb/yg3q/3Nt/QZX1ob9pw5zAoGF4v///fz9pw5zAoGF4v///fz/yg3q/luchQDIzcz+/1prAluchQDIzcz+g9IS/luchQDIzc7+/1prAluchQDIzc7+g9IS/O8vzPDIzcz+g9IS/O8vzPDIzc7+g9IS/O8vzPDIzcz+/1prAO8vzPDIzc7+/1prAoGF4v2s2nb/yg3q/oGF4v2s2nb9pw5zALs+DP5X1ob/yg3q/Ls+DP5X1ob9pw5zACqNnQZX1ob9pw5zACqNnQZX1ob/yg3q/3Nt/QZX1ob/yg3q/CqNvQd7Nmr/yg3q/3Nt/Qd7Nmr9pw5zAoGF4v///f79pw5zAoGF4v///f7/yg3q/Ls+DP///fz9pw5zALs+DP///fz/yg3q/")
+}, {
+"aabb": AABB(-0.9999999, -0.99999994, -6.859104, 3.4999995, 1.9999999, 1.9601393),
+"format": 34896613377,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAwACAAEAAwAEAAIABAAAAAIABQADAAEABAAGAAAABQABAAcAAAAHAAEACAAGAAUACQAAAAYACQAGAAgACgAAAAkACgAHAAAACAALAAkACQALAAwACQAMAAoACAANAAsACgAMAA4ADwANAAgADwAHAAoADwAOAA0ACgAOAA8ADwAFAAcACAAFAA8A"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("SJL//wAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAAAAAAAAAAAAEiSAAD//wAASJIAAAAAAABIkv////8AAP//ZgbtAwAA//+Y+e0DAAD//5j5EfwAACRJmPntAwAAJEmY+RH8AAAkSWYG7QMAACRJZgYR/AAA//9mBhH8AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_hg6py"]
+resource_name = "chalkboard_Cube_006"
+_surfaces = [{
+"aabb": AABB(-1, -1, -0.98006976, 3.5, 2, 1.9601395),
+"attribute_data": PackedByteArray("/5//f//f/z//3/9//5//P/9f/z//nwAA/5//P/9fAAD/X////5//v/+f////X/+/mWGZQZlhZX6ZYWV+mWGZQf9f/7//n/9//5//v/9f/39lnmV+/1//f5lhZX7/n/9/mWGZQf+f/z9lnplB/1//P2WemUH/n/9/ZZ5lfv+f/z+ZYWV+/1//P5lhmUH/X/9/ZZ6ZQZlhmUGZYZlBZZ6ZQWWeZX5lnplBZZ6ZQWWeZX6ZYWV+ZZ5lfmWeZX6ZYWV+"),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
+"material": ExtResource("2_nfy51"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("SJL//wAA//8AAP///////wAA//8AAP//SJL///////9IkgAA////vwAA//////+/SJL//////78AAAAA////vwAAAAD//1TVAAD//wAAVNUAAP////9U1QAAAAAAAFTV//9mBhH8/78kSWYG7QP/v///ZgbtA/+/JElmBhH8/78AAAAAAAD//0iS//8AAP//AAD//wAA//9IkgAAAAD/////mPntA2v/SJIAAAAAa////2YG7QNr/0iS//8AAGv///9mBhH8AMBIkv////8AwP//mPkR/ADASJIAAP//AMD//5j5Efz7/kiS//8AABn///+Y+e0Da/9Ikv////+s/v//ZgbtAwHASJIAAP//AsD//2YGEfwEwEiSAAAAAADA//+Y+RH8//8kSWYGEfz/////ZgYR/P//JEmY+RH8/////5j57QP/vyRJmPkR/P+///+Y+RH8/78kSZj57QP/v///ZgbtA/5/JEmY+e0D/n///5j57QP+fyRJZgbtA/5//3//v/9//7//f/+//3//v/////////////////////9U1VTVVNVU1VTVVNVU1VTV////f////3////9/////f/+//7//v/+//7//v/+//7+uP64/rj+uP64/rj+uP64/QQFBAUEBQQFBAUEBQQFBAYA//wBvPyABQT95Aa0/qAAtAt977AHfez0B33vYAt97////f////3////9/////fwAA/38AAP9/AAD/fwAA/3//f////3////9/////f///")
+}, {
+"aabb": AABB(-0.97023964, -1.2653071, -4.898854, 17.461416, 2.265307, 3.920278),
+"attribute_data": PackedByteArray("AADAPgAAgD4AAMA+AACAPgAAwD4AAAAAAADAPgAAgD4AAMA+AACAPgAAwD4AAIA+AAAgPwAAAABmZh4/NDODPjMzwz40M4M+AADAPgAAQD8AAMA+AAAAPwAAwD4AAAA/AADAPgAAAD9mZh4/zMz8PjMzwz7OzPw+AAAgPwAAQD8AAMA+AAAAPwAAwD4AAAA/AADAPgAAAD8AAMA+AAAAPwAAwD4AAIA+AADAPgAAgD4AAMA+AAAAPwAAwD4AAAA/AADAPgAAgD4AAMA+AACAPgAAwD4AAAA/AADAPgAAAD8AAMA+AACAPgAAwD4AAAA/AADAPgAAgD4AAAA+AACAPgAAwD4AAAA/AAAAPgAAAD8AAMA+AACAPgAAwD4AAAA/ZmYeP8zM/D4AAGA/AACAPgAAYD8AAAA/ZmYePzQzgz4AAMA+AACAPwAAID8AAEA/AAAgPwAAgD8AAMA+AABAPzMzwz40M4M+MzPDPs7M/D4zM8M+zsz8PjMzwz40M4M+MzPDPs7M/D4AAMA+AACAPjMzwz40M4M+AADAPgAAAD9mZh4/NDODPjMzwz40M4M+MzPDPjQzgz5mZh4/NDODPmZmHj/MzPw+ZmYePzQzgz5mZh4/NDODPmZmHj/MzPw+MzPDPs7M/D5mZh4/zMz8PmZmHj/MzPw+MzPDPs7M/D4AAMA+AACAPwAAwD4AAEA/AADAPgAAgD8AAMA+AABAPwAAwD4AAIA+AADAPgAAAD8AAMA+AAAAPwAAwD4AAIA+AADAPgAAgD4AAMA+AABAPwAAwD4AAAA/AADAPgAAQD8AAMA+AAAAPwAAwD4AAAA/AADAPgAAAD8AAMA+AAAAPwAAwD4AAAA/AADAPgAAAAAAAMA+AACAPgAAwD4AAAAAAADAPgAAgD4AAMA+AACAPgAAwD4AAIA+AADAPgAAgD4AAMA+AACAPgAAwD4AAIA+AADAPgAAgD4AAMA+AAAAPwAAwD4AAIA+AADAPgAAAD8AAMA+AACAPgAAwD4AAAA/AADAPgAAAD8AAMA+AACAPgAAwD4AAIA+AADAPgAAAD8AAMA+AAAAPwAAwD4AAIA+AADAPgAAgD4AAMA+AAAAPwAAwD4AAAA/AADAPgAAgD4AAMA+AACAPgAAwD4AAAA/AAAgPwAAAD8AACA/AACAPgAAwD4AAIA+AAAgPwAAgD4AAMA+AAAAAAAAwD4AAIA/AADAPgAAQD8AAMA+AABAPwAAID8AAAA/AADAPgAAAD8AAMA+AAAAPwAAID8AAAA/AAAgPwAAgD4AAMA+AACAPgAAID8AAAA/AAAgPwAAgD4="),
+"format": 34359742487,
+"index_count": 234,
+"index_data": PackedByteArray("QAArAEEAQAAoACsAQgBAAEEAQgBBAEMAIQBEAEUAIQAfAEQARABGAEUARABHAEYARwAgAEYARwBIACAASQBKAAoASQAJAEoASwBJAAoASwAKAAsASgAMAAoASgBMAAwAEAAMAEwAEQAQAE0ADAAQABEATgAMABEADABOAE8ADABPABIADAASAFAAAQACAFEAAQBSAAIAAAABAFEAAABRAFMAAQBUAFIAAQADAFQAAwBVAFQAAwBWAFUAVgADAAQAVwAEAAMABABXAFgABABYAAUABAAFAFkAEwAUABUAEwAWABQAFwAYABkAFwAaABgAGgBaABgAGgBbAFoAXAAjAF0AXAAiACMAXgBfAGAAXgBhAF8AYgBjAGQAYgBlAGMAHQBmAB4AHQBnAGYAHgBoAB0AHgBpAGgAGwAcAGoAGwBrABwAbAAlACYAbABtACUAbgAGAG8AbgBwAAYAcQApACoAcQByACkALAAtAC4ALAAvAC0AcwB0AA8AcwB1AHQADQB2AA4ADQB3AHYACAB4AAcACAB5AHgAJwB6ACQAJwB7AHoAMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0A"),
+"lods": [0.13026856, PackedByteArray("AAABAAIAAQADAAIAAwAEAAIABAADAAUAAAACAAYAAAAGAAcACAAAAAcACQAKAAsACQAMAAoACQALAA0ADQALAA4ACQANAA8ACQAQAAwADAAQABEADAARABIAEwAUABUAEwAWABQAFwAYABkAFwAaABgAGAAaABsAGwAcABgAGwAdABwAHgAcAB0AHwAgACEAHwAiACAAIgAjACAAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0AMAAxADIAMAAzADEANAA1ADYANAA3ADUAOAA5ADoAOAA7ADkAPAA9AD4APAA/AD0A")],
+"material": ExtResource("2_nfy51"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 124,
+"vertex_data": PackedByteArray("Ls+DP///f7/yg3q/Ls+DP2s2nb/yg3q/oGF4v5X1ob/yg3q/CqNnQWs2nb/yg3q/7u2DQWs2nb/yg3q/3Nt/Qd7Nmr/yg3q/oGF4v///fz/yg3q/luchQDIzcz+g9IS/luchQDIzc7+g9IS/oGF4v5X1ob9pw5zALs+DP2s2nb9pw5zALs+DP///f79pw5zACqNnQWs2nb9pw5zAluchQDIzcz+/1prAluchQDIzc7+/1prAoGF4v///fz9pw5zA3Nt/QZX1ob9pw5zA7u2DQWs2nb9pw5zACqNvQd7Nmr9pw5zALs+DP///f79pw5zALs+DP2s2nb/yg3q/Ls+DP///f7/yg3q/Ls+DP2s2nb9pw5zALs+DP2s2nb9pw5zACqNnQWs2nb/yg3q/Ls+DP2s2nb/yg3q/CqNnQWs2nb9pw5zACqNvQd7Nmr9pw5zA3Nt/Qd7Nmr/yg3q/7u2DQWs2nb9pw5zA7u2DQWs2nb/yg3q/oGF4v5X1ob/yg3q/3Nt/QZX1ob9pw5zAoGF4v5X1ob9pw5zA7u2DQWs2nb/yg3q/7u2DQWs2nb9pw5zAluchQDIzcz+/1prAoGF4v///fz/yg3q/oGF4v///fz9pw5zAluchQDIzcz+g9IS/oGF4v5X1ob/yg3q/oGF4v///fz9pw5zAoGF4v///fz/yg3q/oGF4v5X1ob9pw5zAluchQDIzc7+g9IS/O8vzPDIzc7+/1prAluchQDIzc7+/1prAO8vzPDIzc7+g9IS/luchQDIzc7+/1prALs+DP///f7/yg3q/luchQDIzc7+g9IS/Ls+DP///f79pw5zAluchQDIzcz+g9IS/O8vzPDIzc7+g9IS/luchQDIzc7+g9IS/O8vzPDIzcz+g9IS/luchQDIzcz+/1prAO8vzPDIzcz+g9IS/luchQDIzcz+g9IS/O8vzPDIzcz+/1prAluchQDIzc7+/1prAO8vzPDIzcz+/1prAluchQDIzcz+/1prAO8vzPDIzc7+/1prAoGF4v2s2nb/yg3q/oGF4v2s2nb9pw5zAoGF4v///f7/yg3q/oGF4v///f79pw5zALs+DP5X1ob/yg3q/Ls+DP5X1ob9pw5zACqNnQZX1ob9pw5zACqNnQZX1ob/yg3q/3Nt/QZX1ob/yg3q/oGF4v2s2nb9pw5zALs+DP5X1ob9pw5zAoGF4v///f79pw5zACqNnQZX1ob9pw5zA7u2DQWs2nb9pw5zA7u2DQWs2nb9pw5zA3Nt/Qd7Nmr9pw5zACqNnQWs2nb9pw5zAoGF4v2s2nb/yg3q/Ls+DP5X1ob/yg3q/oGF4v///f7/yg3q/CqNnQZX1ob/yg3q/3Nt/QZX1ob/yg3q/7u2DQWs2nb/yg3q/CqNnQWs2nb/yg3q/CqNvQd7Nmr/yg3q/7u2DQWs2nb/yg3q/CqNnQWs2nb/yg3q/CqNnQWs2nb9pw5zA3Nt/QZX1ob/yg3q/3Nt/QZX1ob9pw5zA7u2DQWs2nb/yg3q/3Nt/Qd7Nmr9pw5zA7u2DQWs2nb9pw5zA3Nt/Qd7Nmr/yg3q/CqNvQd7Nmr/yg3q/CqNnQWs2nb9pw5zACqNvQd7Nmr9pw5zACqNnQWs2nb/yg3q/7u2DQWs2nb/yg3q/7u2DQWs2nb9pw5zA7u2DQWs2nb9pw5zA7u2DQWs2nb/yg3q/CqNvQd7Nmr/yg3q/3Nt/Qd7Nmr9pw5zALs+DP///fz9pw5zALs+DP///fz/yg3q/Ls+DP///f7/yg3q/Ls+DP///fz/yg3q/oGF4v///f7/yg3q/oGF4v///f7/yg3q/oGF4v///f79pw5zAoGF4v///f79pw5zALs+DP///fz9pw5zALs+DP///f79pw5zALs+DP///f79pw5zALs+DP///fz9pw5zALs+DP///fz/yg3q/Ls+DP///f7/yg3q/Ls+DP///fz9pw5zALs+DP///fz/yg3q//3//f/9/////f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3//f/9////vhP9//3///++E/3//f////////////7//////////v///////f////////////7///w77/3/+////Dvv/f/7///////9/////////////v/////////+//////////7////9/////v////3////+/////f////7////9/////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//fwAA////v/9/AAD///+//38AAP///7/WiNcI////v9aI1wj///+/IITe+zsHAsL/f///AAD/v/9///8AAP+/IITe+xME2cIAAP9/////vwAA/3//f///AAD/f/9///8AAP9/////v/9///////+//3///////7//f///////v/9///////+/IIQgBOv72cIghCAENfoIwiCEIATD+ALCIIQgBPf7icP/////////v/////////+//////////7//////////v/9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//3//f////z//f/9/////P/9//3////8//3//f////z8AAP9/////vwAA/3////+/AAD/f/9///8AAP9//3////9/AAD///+//38AAP///7//fwAA////v/9/AAD///+//38AAP///7//////////v/////////+///////9/////////////v/////////+//////////7//////////v/////////+//3//f////z//f/9/////P/9//3//f////3//f////z//f/9/////P/9//3////8//3//f////z//f/9/////P/9//3////8//3///////7//f///////v9aI1wj///+/1ojXCP///7+jhFr7////v6OEWvv///+/o4Ra+////7+jhFr7////v1t7Wvv///+/W3ta+////79be1r7////v1t7Wvv///+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///wAA/7//f///AAD/v/9//3//f////3//f/9/////f/9//3///wAA/3//f///AAD/f/9//////////3//////////f/////////9//////w77/3/+////Dvv/f///74T/f/9////vhP9//3///yCE3vvJBQjCIITe+wcEicM=")
+}, {
+"aabb": AABB(-0.9999999, -0.99999994, -6.859104, 3.4999995, 1.9999999, 1.9601393),
+"attribute_data": PackedByteArray("/5//f//f/z//3/9//5//P/9f/z//nwAA/5//P/9fAAD/X////5//v/+f////X/+/mWGZQZlhZX6ZYWV+mWGZQf9f/7//n/9//5//v/9f/39lnmV+/1//f5lhZX7/n/9/mWGZQf+f/z9lnplB/1//P2WemUH/n/9/ZZ5lfv+f/z+ZYWV+/1//P5lhmUH/X/9/ZZ6ZQZlhmUGZYZlBZZ6ZQWWeZX5lnplBZZ6ZQWWeZX6ZYWV+ZZ5lfmWeZX6ZYWV+"),
+"format": 34896613399,
+"index_count": 72,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0AEAARABIAEAATABEAFAAVABYAFAAXABUAGAAZABoAGAAbABkAHAAdAB4AHAAfAB0AIAAhACIAIAAjACEAJAAlACYAJAAnACUAKAApACoAKAArACkALAAtAC4ALAAvAC0A"),
+"material": ExtResource("2_nfy51"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 48,
+"vertex_data": PackedByteArray("SJL//wAA//8AAP///////wAA//8AAP//SJL///////9IkgAA////vwAA//////+/SJL//////78AAAAA////vwAAAAD//1TVAAD//wAAVNUAAP////9U1QAAAAAAAFTV//9mBhH8/78kSWYG7QP/v///ZgbtA/+/JElmBhH8/78AAAAAAAD//0iS//8AAP//AAD//wAA//9IkgAAAAD/////mPntA2v/SJIAAAAAa////2YG7QNr/0iS//8AAGv///9mBhH8AMBIkv////8AwP//mPkR/ADASJIAAP//AMD//5j5Efz7/kiS//8AABn///+Y+e0Da/9Ikv////+s/v//ZgbtAwHASJIAAP//AsD//2YGEfwEwEiSAAAAAADA//+Y+RH8//8kSWYGEfz/////ZgYR/P//JEmY+RH8/////5j57QP/vyRJmPkR/P+///+Y+RH8/78kSZj57QP/v///ZgbtA/5/JEmY+e0D/n///5j57QP+fyRJZgbtA/5//3//v/9//7//f/+//3//v/////////////////////9U1VTVVNVU1VTVVNVU1VTV////f////3////9/////f/+//7//v/+//7//v/+//7+uP64/rj+uP64/rj+uP64/QQFBAUEBQQFBAUEBQQFBAYA//wBvPyABQT95Aa0/qAAtAt977AHfez0B33vYAt97////f////3////9/////fwAA/38AAP9/AAD/fwAA/3//f////3////9/////f///")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_v7tdq")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_epoq4"]
+_surfaces = [{
+"aabb": AABB(-2.3841858e-07, -0.95, -0.95, 1e-05, 1.9, 1.9),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAA=")
+}, {
+"aabb": AABB(-0.029760476, -0.95, -1.9451604, 1e-05, 1.9, 0.95000005),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAA=")
+}, {
+"aabb": AABB(-0.029760476, -0.95, 0.9943578, 1e-05, 1.9, 0.95000005),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAAAAAAP////8AAAAA//8AAAAAAAAAAP//AAA=")
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_nfy51"]
+resource_name = "chalkboard_Cube_001"
+_surfaces = [{
+"aabb": AABB(-2.3841858e-07, -0.95, -0.95, 1e-05, 1.9, 1.9),
+"attribute_data": PackedByteArray("mWFlfmWemUFlnmV+mWGZQQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": ExtResource("2_sxi46"),
+"name": "Material",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAVNUAAP////9U1QAA//8AAFTVAAAAAP//VNWqKqoqqiqqKqoqqiqqKqoq")
+}, {
+"aabb": AABB(-0.029760476, -0.95, -1.9451604, 1e-05, 1.9, 0.95000005),
+"attribute_data": PackedByteArray("mWFlfmWemUFlnmV+mWGZQQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": ExtResource("2_sxi46"),
+"name": "Material.001",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAVNUAAP////9U1QAA//8AAFTVAAAAAP//VNWqKqoqqiqqKqoqqiqqKqoq")
+}, {
+"aabb": AABB(-0.029760476, -0.95, 0.9943578, 1e-05, 1.9, 0.95000005),
+"attribute_data": PackedByteArray("mWFlfmWemUFlnmV+mWGZQQ=="),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray("AAABAAIAAAADAAEA"),
+"material": ExtResource("2_sxi46"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray("AAAAAAAAVNUAAP////9U1QAA//8AAFTVAAAAAP//VNWqKqoqqiqqKqoqqiqqKqoq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_epoq4")
+
+[node name="chalkboard" type="Node3D"]
+
+[node name="frame" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.6, 0, 0, 0, 0.5000001, 0, 0, 1.472)
+mesh = SubResource("ArrayMesh_hg6py")
+skeleton = NodePath("")
+
+[node name="board" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.01, 0, 0, 0, 0.6, 0, 0, 0, 1, 0.03, -0.0012259483, 0)
+mesh = SubResource("ArrayMesh_nfy51")
+skeleton = NodePath("")
+
+[node name="english controls" type="Node3D" parent="board"]
+
+[node name="controls" type="Label3D" parent="board/english controls"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.03, 0.8, -1.315)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "controls:"
+font = ExtResource("3_bc1n3")
+font_size = 22
+
+[node name="pick up" type="Label3D" parent="board/english controls"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.029999971, 0.59727764, -1.2474852)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "- pick up"
+font = ExtResource("3_bc1n3")
+font_size = 18
+
+[node name="button_text" type="Label3D" parent="board/english controls/pick up"]
+transform = Transform3D(1, 0, -6.750156e-14, 0, 1, 0, 0, 0, 1, 0.22940052, -0.16919675, 0)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "grip 
+buttons
+"
+font = ExtResource("3_bc1n3")
+font_size = 14
+horizontal_alignment = 0
+
+[node name="button_icons" type="Node3D" parent="board/english controls/pick up"]
+
+[node name="left_grip" type="Sprite3D" parent="board/english controls/pick up/button_icons"]
+transform = Transform3D(0.035415284, 0, -2.4424907e-15, 0, 0.057401303, 0, 0, 0, 0.050000004, -0.093604326, -0.16087073, 0)
+shaded = true
+texture = ExtResource("4_68ibg")
+
+[node name="slash" type="Sprite3D" parent="board/english controls/pick up/button_icons"]
+transform = Transform3D(0.036017366, 0, -2.220446e-15, 0, 0.059917443, 0, -2.220446e-16, 0, 0.050000004, 0.00836432, -0.1582754, 0)
+shaded = true
+texture = ExtResource("5_0rngh")
+
+[node name="right_grip" type="Sprite3D" parent="board/english controls/pick up/button_icons"]
+transform = Transform3D(0.035415284, 0, -1.7763568e-15, 0, 0.057401303, 0, 0, 0, 0.050000004, 0.11713123, -0.16216862, 0)
+shaded = true
+texture = ExtResource("6_kebyh")
+
+[node name="interact" type="Label3D" parent="board/english controls"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0.0027052572, 0.99999636, 1.1825055e-10, -0.99999636, 0.0027052572, -4.371123e-08, 0.029999971, 0.20556231, -1.294)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "- interact"
+font = ExtResource("3_bc1n3")
+font_size = 18
+
+[node name="button_text" type="Label3D" parent="board/english controls/interact"]
+transform = Transform3D(1, -2.7939677e-09, -6.3948846e-14, 2.7939677e-09, 1.0000001, 8.326673e-17, 0, -1.3877788e-17, 1, 0.18188393, -0.16603826, 0)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "trigger 
+buttons"
+font = ExtResource("3_bc1n3")
+font_size = 14
+horizontal_alignment = 0
+
+[node name="button_icons" type="Node3D" parent="board/english controls/interact"]
+transform = Transform3D(1, -1.6298145e-09, -2.4868996e-14, 1.6298145e-09, 1.0000001, 4.1633363e-17, 0, -1.3877788e-17, 1, -0.047513604, -0.013436288, 0)
+
+[node name="left_trigger" type="Sprite3D" parent="board/english controls/interact/button_icons"]
+transform = Transform3D(0.03246994, 1.4551915e-11, 0, -5.820766e-11, 0.055404447, -4.3368087e-18, 1.110223e-16, 5.2041704e-18, 0.050000004, -0.09125972, -0.1424399, 0)
+shaded = true
+texture = ExtResource("7_xwmni")
+
+[node name="slash" type="Sprite3D" parent="board/english controls/interact/button_icons"]
+transform = Transform3D(0.034824397, 0, -6.661338e-16, -1.4551915e-11, 0.057828195, -1.7347235e-18, 0, 2.1684043e-18, 0.050000004, 0.022674918, -0.1399684, 0)
+shaded = true
+texture = ExtResource("5_0rngh")
+
+[node name="right_trigger" type="Sprite3D" parent="board/english controls/interact/button_icons"]
+transform = Transform3D(0.03246994, 0, -2.220446e-16, -3.6379788e-11, 0.055404447, -1.7347235e-18, 1.110223e-16, 3.035766e-18, 0.050000004, 0.1242013, -0.14370829, 0)
+shaded = true
+texture = ExtResource("8_phjp8")
+
+[node name="adjust height" type="Label3D" parent="board/english controls"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.029999971, -0.20553009, -1.441)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "- adjust height"
+font = ExtResource("3_bc1n3")
+font_size = 18
+
+[node name="button_text" type="Label3D" parent="board/english controls/adjust height"]
+transform = Transform3D(1, 0, -6.750156e-14, 0, 1, 0, 0, 0, 1, 0.030064702, -0.18019678, 0)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "right 
+thumbstick"
+font = ExtResource("3_bc1n3")
+font_size = 14
+horizontal_alignment = 0
+
+[node name="button_icons" type="Node3D" parent="board/english controls/adjust height"]
+
+[node name="right_thumbstick" type="Sprite3D" parent="board/english controls/adjust height/button_icons"]
+transform = Transform3D(0.044994663, 0, -8.881784e-16, 0, 0.086987, 0, 0, 0, 0.050000004, -0.17428637, -0.1780081, 0)
+shaded = true
+texture = ExtResource("9_pf8cc")
+
+[node name="turn left right" type="Label3D" parent="board/english controls"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.029999971, -0.6564288, -1.463)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "- turn left/right"
+font = ExtResource("3_bc1n3")
+font_size = 18
+
+[node name="button_text" type="Label3D" parent="board/english controls/turn left right"]
+transform = Transform3D(1, 0, -6.3948846e-14, 0, 1, 0, 0, 0, 1, 0.0035799742, -0.15453947, 0)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "left 
+thumbstick"
+font = ExtResource("3_bc1n3")
+font_size = 14
+horizontal_alignment = 0
+
+[node name="button_icons" type="Node3D" parent="board/english controls/turn left right"]
+
+[node name="left_thumbstick" type="Sprite3D" parent="board/english controls/turn left right/button_icons"]
+transform = Transform3D(0.044994663, 0, -1.9984014e-15, 0, 0.086987, 0, 0, 0, 0.050000004, -0.19713473, -0.14701366, 0)
+shaded = true
+texture = ExtResource("4_yflce")
+
+[node name="deutsche steuerung" type="Node3D" parent="board"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.9213867)
+
+[node name="steuerung" type="Label3D" parent="board/deutsche steuerung"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.029999971, 0.8079866, -1.3221881)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "steuerung:"
+font = ExtResource("3_bc1n3")
+font_size = 22
+
+[node name="aufheben" type="Label3D" parent="board/deutsche steuerung"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.029999971, 0.6229538, -1.276066)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "- aufheben"
+font = ExtResource("3_bc1n3")
+font_size = 18
+
+[node name="tasten_text" type="Label3D" parent="board/deutsche steuerung/aufheben"]
+transform = Transform3D(1, 0, -5.3290705e-14, 0, 1, 0, 0, 0, 1, 0.14508212, -0.17036265, 0)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "griff 
+tasten"
+font = ExtResource("3_bc1n3")
+font_size = 14
+horizontal_alignment = 0
+
+[node name="tasten_icons" type="Node3D" parent="board/deutsche steuerung/aufheben"]
+transform = Transform3D(1, 0, -7.1054274e-15, 0, 1, 0, 0, 0, 1, -0.05921054, 0.0028194785, 0)
+
+[node name="left_grip" type="Sprite3D" parent="board/deutsche steuerung/aufheben/tasten_icons"]
+transform = Transform3D(0.035415284, 0, -2.4424907e-15, 0, 0.057401303, 0, 0, 0, 0.050000004, -0.093604326, -0.16087073, 0)
+shaded = true
+texture = ExtResource("4_68ibg")
+
+[node name="slash" type="Sprite3D" parent="board/deutsche steuerung/aufheben/tasten_icons"]
+transform = Transform3D(0.036017366, 0, -2.220446e-15, 0, 0.059917443, 0, -2.220446e-16, 0, 0.050000004, 0.00836432, -0.1582754, 0)
+shaded = true
+texture = ExtResource("5_0rngh")
+
+[node name="right_grip" type="Sprite3D" parent="board/deutsche steuerung/aufheben/tasten_icons"]
+transform = Transform3D(0.035415284, 0, -1.7763568e-15, 0, 0.057401303, 0, 0, 0, 0.050000004, 0.11713123, -0.16216862, 0)
+shaded = true
+texture = ExtResource("6_kebyh")
+
+[node name="interagieren" type="Label3D" parent="board/deutsche steuerung"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0.0027052572, 0.99999636, 1.1825055e-10, -0.99999636, 0.0027052572, -4.371123e-08, 0.029999971, 0.22190511, -1.3768839)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "- interagieren"
+font = ExtResource("3_bc1n3")
+font_size = 18
+
+[node name="tasten_text" type="Label3D" parent="board/deutsche steuerung/interagieren"]
+transform = Transform3D(1, -3.0267984e-09, -6.750156e-14, 3.0267984e-09, 1.0000001, 9.7144515e-17, 0, -1.3877788e-17, 1, 0.0466547, -0.16567242, 0)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "trigger 
+tasten"
+font = ExtResource("3_bc1n3")
+font_size = 14
+horizontal_alignment = 0
+
+[node name="button_icons" type="Node3D" parent="board/deutsche steuerung/interagieren"]
+transform = Transform3D(1, -2.0954758e-09, -3.1974423e-14, 2.0954758e-09, 1.0000001, 6.938894e-17, 0, -1.3877788e-17, 1, -0.1761241, -0.01308836, 0)
+
+[node name="left_trigger" type="Sprite3D" parent="board/deutsche steuerung/interagieren/button_icons"]
+transform = Transform3D(0.03246994, 1.4551915e-11, 0, -5.820766e-11, 0.055404447, -4.3368087e-18, 1.110223e-16, 5.2041704e-18, 0.050000004, -0.09125972, -0.1424399, 0)
+shaded = true
+texture = ExtResource("7_xwmni")
+
+[node name="slash" type="Sprite3D" parent="board/deutsche steuerung/interagieren/button_icons"]
+transform = Transform3D(0.034824397, 0, -6.661338e-16, -1.4551915e-11, 0.057828195, -1.7347235e-18, 0, 2.1684043e-18, 0.050000004, 0.022674918, -0.1399684, 0)
+shaded = true
+texture = ExtResource("5_0rngh")
+
+[node name="right_trigger" type="Sprite3D" parent="board/deutsche steuerung/interagieren/button_icons"]
+transform = Transform3D(0.03246994, 0, -2.220446e-16, -3.6379788e-11, 0.055404447, -1.7347235e-18, 1.110223e-16, 3.035766e-18, 0.050000004, 0.1242013, -0.14370829, 0)
+shaded = true
+texture = ExtResource("8_phjp8")
+
+[node name="höhe_einstellen" type="Label3D" parent="board/deutsche steuerung"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.029999971, -0.17985083, -1.4395709)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "- höhe einstellen"
+font = ExtResource("3_bc1n3")
+font_size = 18
+
+[node name="tasten_text" type="Label3D" parent="board/deutsche steuerung/höhe_einstellen"]
+transform = Transform3D(1, 0, -7.1054274e-14, 0, 1, 0, 0, 0, 1, -0.02249837, -0.16870818, 0)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "rechter
+daumenstick"
+font = ExtResource("3_bc1n3")
+font_size = 14
+horizontal_alignment = 0
+
+[node name="tasten_icons" type="Node3D" parent="board/deutsche steuerung/höhe_einstellen"]
+
+[node name="rechter_daumenstick" type="Sprite3D" parent="board/deutsche steuerung/höhe_einstellen/tasten_icons"]
+transform = Transform3D(0.044994663, 0, -1.110223e-15, 0, 0.086987, 0, 0, 0, 0.050000004, -0.18328977, -0.17800808, 0)
+shaded = true
+texture = ExtResource("9_pf8cc")
+
+[node name="links_rechts_drehen" type="Label3D" parent="board/deutsche steuerung"]
+transform = Transform3D(-4.3711392e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.029999971, -0.6377559, -1.0071359)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "- links/rechts 
+drehen"
+font = ExtResource("3_bc1n3")
+font_size = 18
+horizontal_alignment = 0
+
+[node name="tasten_text" type="Label3D" parent="board/deutsche steuerung/links_rechts_drehen"]
+transform = Transform3D(1, 0, -7.1054274e-14, 0, 1, 0, 0, 0, 1, 0.40774333, -0.19422817, 0)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "linker
+daumenstick"
+font = ExtResource("3_bc1n3")
+font_size = 14
+horizontal_alignment = 0
+
+[node name="tasten_icons" type="Node3D" parent="board/deutsche steuerung/links_rechts_drehen"]
+
+[node name="linker_daumenstick" type="Sprite3D" parent="board/deutsche steuerung/links_rechts_drehen/tasten_icons"]
+transform = Transform3D(0.044994663, 0, -2.220446e-15, 0, 0.086987, 0, 0, 0, 0.050000004, 0.25261092, -0.19441444, 0)
+shaded = true
+texture = ExtResource("4_yflce")
+
+[node name="Label3D" type="Label3D" parent="board"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.04, 0, 0)
+shaded = true
+outline_modulate = Color(0, 0, 0, 0)
+text = "VR chemistry lab"
+font = ExtResource("3_bc1n3")

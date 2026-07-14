@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4cgan7bi8o4l"]
+
+[ext_resource type="Script" uid="uid://cqhohof2h452n" path="res://scripts/spawner.gd" id="1_s6qyw"]
+[ext_resource type="PackedScene" uid="uid://ckgrsfcmkacwk" path="res://objects/chemicals_stored/bottle_na.tscn" id="2_fd46i"]
+[ext_resource type="Material" uid="uid://dwgyx7ykg0oa3" path="res://materials_sprites_and_textures/materials/spawner_silhouette.tres" id="3_fd46i"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_fd46i"]
+material = ExtResource("3_fd46i")
+top_radius = 0.033
+bottom_radius = 0.033
+height = 0.01
+radial_segments = 12
+
+[node name="spawner_bottle_na" type="Node3D"]
+script = ExtResource("1_s6qyw")
+spawnedObject = ExtResource("2_fd46i")
+
+[node name="silhouette_bottle_na" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.02, 0, 0, 0, 1, 0, -0.048834965, 0)
+mesh = SubResource("CylinderMesh_fd46i")

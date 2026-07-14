@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://b46wj6cb3wff8"]
+
+[ext_resource type="Script" uid="uid://cqhohof2h452n" path="res://scripts/spawner.gd" id="1_3w1as"]
+[ext_resource type="PackedScene" uid="uid://n10616pm5w1i" path="res://objects/tools/testtube_stand.tscn" id="2_c3bpp"]
+[ext_resource type="Material" uid="uid://dwgyx7ykg0oa3" path="res://materials_sprites_and_textures/materials/spawner_silhouette.tres" id="3_sqio4"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_c3bpp"]
+material = ExtResource("3_sqio4")
+
+[node name="spawner_testtube_stand" type="Node3D"]
+script = ExtResource("1_3w1as")
+spawnedObject = ExtResource("2_c3bpp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.045938943, 0, 0, 0, 1, 0, 0, 0, 0.12748238, 0, 0, 0)
+mesh = SubResource("PlaneMesh_c3bpp")
