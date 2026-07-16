@@ -1,12 +1,12 @@
 # VR Chemistry Lab
 
 ## Description
-The VR Chemistry Lab is designed for educational purposes. Users can conduct experiments, that they wouldn't be able to do in real life. 
+The VR Chemistry Lab is designed for educational purposes. Users can conduct experiments, that they wouldn't be able to do in real life due to them being toxic, corrosive or otherwise hazardous. 
 Features: 
 - use tools like tweezers, tubeclamps, test tubes and many more
 - heat with a bunsen burner
 - modular reactions
-- multiple chemistry-engines + open to extention 
+- multiple chemistry-engines + open to extension 
 
 Possible Reaction so far:
 - 2 Na + I2 -> 2 NaI
@@ -14,17 +14,18 @@ Possible Reaction so far:
 - 2 Na + Cl2 -> 2 NaCl
 
 ## Visuals
-#todo add some screenshots and a video/gif here
+\input{Assets/Reaktionsvideo.gif}
+
 
 ## Needed for Installation
-- Meta Horizen Link / other way of connecting VR Glasses to PC
-- sometimes admin rights to run it
+- Meta Horizon Link / other way of connecting VR Glasses to PC
+- possibly admin rights to run
 
 ## Installation
-- Download the latest version as a .zip from #todo link here
-- Unpack the .zip folder
+- Download the latest build as a .zip from https://github.com/VRChemistryLab/VR_Chemistry_Lab 
+- Unzip the folder
 - Set up a VR-headset with PC-link
-- Run start.bat
+- Run start.bat, admin rights might be necessary
 
 ## Made with
 - Godot Version 4.5.1 (source: https://godotengine.org/)
