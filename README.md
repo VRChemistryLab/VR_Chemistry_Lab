@@ -14,7 +14,7 @@ Possible Reaction so far:
 - 2 Na + Cl2 -> 2 NaCl
 
 ## Visuals
-\input{Assets/Reaktionsvideo.gif}
+<img width="640" height="360" alt="Reaktionsvideo" src="https://github.com/user-attachments/assets/4517dca8-14d4-424d-b828-a4399b784758" />
 
 
 ## Needed for Installation
