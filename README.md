@@ -2,6 +2,7 @@
 
 ## Description
 The VR Chemistry Lab is designed for educational purposes. Users can conduct experiments, that they wouldn't be able to do in real life due to them being toxic, corrosive or otherwise hazardous. 
+
 Features: 
 - use tools like tweezers, tubeclamps, test tubes and many more
 - heat with a bunsen burner
