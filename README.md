@@ -23,7 +23,7 @@ Possible Reaction so far:
 - possibly admin rights to run
 
 ## Installation
-- Download the latest build as a .zip from https://github.com/VRChemistryLab/VR_Chemistry_Lab 
+- Download the latest build as a .zip from https://drive.google.com/file/d/1qUNzxrnjJa5QwgNGuuC0BfBq2ldegi91/view?usp=sharing
 - Unzip the folder
 - Set up a VR-headset with PC-link
 - Run start.bat, admin rights might be necessary
