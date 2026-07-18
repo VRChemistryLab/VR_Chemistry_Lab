@@ -3,6 +3,12 @@ extends Node
 var pathToChemicals := "res://objects/chemicals"
 var allChemicals: Dictionary = {}
 
+var hardcodedChemicals := {
+	"NaBr": preload("res://objects/chemicals/NaBr.tscn"),
+	"NaCl": preload("res://objects/chemicals/NaCl.tscn"),
+	"NaI": preload("res://objects/chemicals/naI.tscn"),
+}
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	addAllChemicalsToDictionary()

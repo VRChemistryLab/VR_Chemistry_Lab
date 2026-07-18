@@ -1,0 +1,62 @@
+reactions:
+  - name: "Knallgasprobe"
+    equation: "2 H2 + O2 -> 2 H2O"
+    reactants:
+      H2: 2.0
+      O2: 1.0
+    products:
+      H2O: 2.0
+    initial_moles:
+      H2: 2.0
+      O2: 1.0
+      H2O: 0.0
+    k_forward: 35.0
+    k_reverse: 0.0
+    t_end: 0.35
+    dt: 0.0005
+    heat_release_kj_per_extent: 483.6
+    heat_capacity_j_per_k: 1600.0
+    temperature_k: 900.0
+    pressure_atm: 1.0
+
+  - name: "Haber-Bosch-Verfahren"
+    equation: "N2 + 3 H2 <=> 2 NH3"
+    reactants:
+      N2: 1.0
+      H2: 3.0
+    products:
+      NH3: 2.0
+    initial_moles:
+      N2: 1.0
+      H2: 3.0
+      NH3: 0.0
+    k_forward: 0.02
+    k_reverse: 0.018
+    t_end: 90.0
+    dt: 0.02
+    heat_release_kj_per_extent: 92.4
+    heat_capacity_j_per_k: 2500.0
+    volume_liter: 1.0
+    temperature_k: 723.15
+    pressure_atm: 200.0
+    reversible: true
+
+  - name: "Sauerstoff aus Wasserstoffperoxid"
+    equation: "2 H2O2 -> 2 H2O + O2"
+    reactants:
+      H2O2: 2.0
+    products:
+      H2O: 2.0
+      O2: 1.0
+    initial_moles:
+      H2O2: 2.0
+      H2O: 0.0
+      O2: 0.0
+    k_forward: 1.2
+    k_reverse: 0.0
+    t_end: 6.0
+    dt: 0.003
+    heat_release_kj_per_extent: 196.0
+    heat_capacity_j_per_k: 1800.0
+    temperature_k: 333.15
+    pressure_atm: 1.0

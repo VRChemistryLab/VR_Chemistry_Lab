@@ -56,9 +56,8 @@ var reactionRegistry: ReactionRegistry = ReactionRegistry.new()
 @export var printReactionPartsInReaction: bool = false
 @export var printTemperatureEveryProcess: bool = false
 
-# TODO: if your existing DataSynchronizer.gd already used a different value
-# here, keep that one instead of this placeholder.
-const EXISTANCE_TRESHHOLD_IN_MOL: float = 0.001
+
+const EXISTANCE_TRESHHOLD_IN_MOL: float = 0.0001
 
 @onready var elementInstantiator: Node = $ElementInstantiator
 @onready var reactionGroupManager: Node = $reactionGroupManager

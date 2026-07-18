@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cyckb733fh7yd"]
+[gd_scene load_steps=19 format=3 uid="uid://cyckb733fh7yd"]
 
 [ext_resource type="PackedScene" uid="uid://clc5dre31iskm" path="res://addons/godot-xr-tools/xr/start_xr.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://cbqq3naggssih" path="res://objects/player.tscn" id="2_0xm2m"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cvsy360twicg0" path="res://objects/furniture/decoration/corkboard_periodic_table.tscn" id="13_jkv2x"]
 [ext_resource type="PackedScene" uid="uid://dfgrta37mcbue" path="res://objects/furniture/decoration/trolley1.tscn" id="13_y6deb"]
 [ext_resource type="PackedScene" uid="uid://b7t8jm2rj2wfx" path="res://objects/furniture/decoration/trolley2.tscn" id="14_og1vs"]
+[ext_resource type="PackedScene" uid="uid://uk60pw4qq864" path="res://objects/furniture/decoration/my_coffeeeeeee_x_o.tscn" id="17_muem4"]
 
 [sub_resource type="Environment" id="Environment_84dwk"]
 ambient_light_color = Color(1, 1, 1, 1)
@@ -103,6 +104,9 @@ transform = Transform3D(0.7258067, 0, 0.6878987, 0, 1, 0, -0.6878987, 0, 0.72580
 
 [node name="door" parent="decorations" instance=ExtResource("6_muem4")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 4, 0, -2)
+
+[node name="my coffeeeeeee xO" parent="decorations" instance=ExtResource("17_muem4")]
+transform = Transform3D(-0.5711872, 0, -0.56012964, 0, 0.8, 0, 0.56012964, 0, -0.5711872, 0.84624994, 0.8166145, -3.8933334)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_84dwk")

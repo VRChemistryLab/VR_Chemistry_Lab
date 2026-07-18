@@ -1,0 +1,80 @@
+phases:
+
+- name: gas
+  thermo: ideal-gas
+  kinetics: gas
+  elements: [Br, Ar]
+  species: [Br2, Ar]
+  reactions: none
+
+- name: surface
+  thermo: ideal-surface
+  elements: [Br, Na]
+  species: [PT, Br_s, Na_s, NaBr_s]
+  kinetics: surface
+  reactions: all
+  site-density: 2.5e-8 mol/cm^2
+  adjacent-phases: [gas]
+
+
+species:
+
+- name: Br2
+  composition: {Br: 2}
+  thermo: {model: constant-cp, T0: 298.15, h0: 0, s0: 245, cp0: 36}
+
+- name: PT
+  composition: {}
+  thermo: {model: constant-cp}
+
+- name: Br_s
+  composition: {Br: 1}
+  thermo:
+    model: constant-cp
+    T0: 298.15
+    h0: -100000
+    s0: 100
+    cp0: 30
+
+- name: Na_s
+  composition: {Na: 1}
+  thermo:
+    model: constant-cp
+    T0: 298.15
+    h0: 0
+    s0: 50
+    cp0: 30
+
+- name: NaBr_s
+  composition: {Na: 1, Br: 1}
+  thermo:
+    model: constant-cp
+    T0: 298.15
+    h0: -360000
+    s0: 100
+    cp0: 50
+
+- name: Ar
+  composition: {}
+  thermo:
+    model: constant-cp
+    T0: 298.15
+    h0: 0
+    s0: 154
+    cp0: 20.8
+
+
+reactions:
+- equation: Br2 + 2 PT <=> 2 Br_s
+  type: interface-Arrhenius
+  rate-constant:
+    A: 1e11
+    b: 0
+    Ea: 45000   
+
+- equation: Br_s + Na_s <=> NaBr_s + PT
+  type: interface-Arrhenius
+  rate-constant:
+    A: 1e12
+    b: 0
+    Ea: 5000

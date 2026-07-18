@@ -88,11 +88,9 @@ resource_local_to_scene = true
 radius = 0.05
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_42cbm"]
-transparency = 1
-blend_mode = 4
-cull_mode = 1
-depth_draw_mode = 1
-albedo_color = Color(0.2899508, 0.24045208, 0.20218846, 0.27450982)
+vertex_color_is_srgb = true
+albedo_color = Color(0.61, 0.61, 0.61, 1)
+metallic = 0.7
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_i1gpj"]
 material = SubResource("StandardMaterial3D_42cbm")

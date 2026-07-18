@@ -1,20 +1,140 @@
-[gd_scene load_steps=7 format=3 uid="uid://degx841642pxw"]
+[gd_scene load_steps=66 format=3 uid="uid://degx841642pxw"]
 
 [ext_resource type="PackedScene" uid="uid://dbd40nu3on6wp" path="res://objects/audio_nodes/audio_collision.tscn" id="1_b32ln"]
-[ext_resource type="AudioStream" uid="uid://bsuimunluhnwn" path="res://sounds/glass/glass.mp3" id="2_yebjr"]
-[ext_resource type="AudioStream" uid="uid://brwcqpq7ex4tu" path="res://sounds/glass/glass1.mp3" id="3_ianuc"]
-[ext_resource type="AudioStream" uid="uid://b38nve0m5skqh" path="res://sounds/glass/glass2.mp3" id="4_5px53"]
-[ext_resource type="AudioStream" uid="uid://c0l43d0suut7g" path="res://sounds/glass/glass3.mp3" id="5_cn0xe"]
+[ext_resource type="AudioStream" uid="uid://dpx6e1go0fllv" path="res://sounds/glass/Glass01.mp3" id="2_8cjai"]
+[ext_resource type="AudioStream" uid="uid://ck1g1fpakm2jj" path="res://sounds/glass/Glass02.mp3" id="3_dcy6t"]
+[ext_resource type="AudioStream" uid="uid://bg3rwlfahrsqc" path="res://sounds/glass/Glass11.mp3" id="4_topqq"]
+[ext_resource type="AudioStream" uid="uid://ca08thmhdl8pm" path="res://sounds/glass/Glass12.mp3" id="5_fbftl"]
+[ext_resource type="AudioStream" uid="uid://y68rboj7tu60" path="res://sounds/glass/Glass13.mp3" id="6_oi6c5"]
+[ext_resource type="AudioStream" uid="uid://dpibkoiaw4oeu" path="res://sounds/glass/Glass14.mp3" id="7_i8x18"]
+[ext_resource type="AudioStream" uid="uid://cey6mugtga7e8" path="res://sounds/glass/Glass15.mp3" id="8_ariek"]
+[ext_resource type="AudioStream" uid="uid://dvfsj28o31vcj" path="res://sounds/glass/Glass16.mp3" id="9_el7eq"]
+[ext_resource type="AudioStream" uid="uid://bervglnd06eef" path="res://sounds/glass/Glass17.mp3" id="10_3122r"]
+[ext_resource type="AudioStream" uid="uid://mrce3makhoqj" path="res://sounds/glass/Glass18.mp3" id="11_l5bln"]
+[ext_resource type="AudioStream" uid="uid://b1g3wsm27v3nc" path="res://sounds/glass/Glass19.mp3" id="12_6re3x"]
+[ext_resource type="AudioStream" uid="uid://c7enycdw0o8py" path="res://sounds/glass/Glass20.mp3" id="13_57jra"]
+[ext_resource type="AudioStream" uid="uid://dx0orsb46cmkd" path="res://sounds/glass/Glass03.mp3" id="14_uacmt"]
+[ext_resource type="AudioStream" uid="uid://dw48r47626ajr" path="res://sounds/glass/Glass21.mp3" id="15_ow1uw"]
+[ext_resource type="AudioStream" uid="uid://ba7hc57mm4qnv" path="res://sounds/glass/Glass22.mp3" id="16_tevyt"]
+[ext_resource type="AudioStream" uid="uid://cl7vv2ttn84cy" path="res://sounds/glass/Glass23.mp3" id="17_fntt8"]
+[ext_resource type="AudioStream" uid="uid://dowrw0i64mmig" path="res://sounds/glass/Glass24.mp3" id="18_723t3"]
+[ext_resource type="AudioStream" uid="uid://38qh8b6jneg7" path="res://sounds/glass/Glass25.mp3" id="19_hd5sy"]
+[ext_resource type="AudioStream" uid="uid://cocs72wk8j30m" path="res://sounds/glass/Glass26.mp3" id="20_rtno5"]
+[ext_resource type="AudioStream" uid="uid://2jgsm0aiqbfo" path="res://sounds/glass/Glass27.mp3" id="21_eg5nm"]
+[ext_resource type="AudioStream" uid="uid://m52csoy8xy3y" path="res://sounds/glass/Glass28.mp3" id="22_ufex7"]
+[ext_resource type="AudioStream" uid="uid://bsaxelre4oagh" path="res://sounds/glass/Glass29.mp3" id="23_y8r52"]
+[ext_resource type="AudioStream" uid="uid://dvvyn18pc0pxo" path="res://sounds/glass/Glass30.mp3" id="24_6x8he"]
+[ext_resource type="AudioStream" uid="uid://3lpdy1tpi7bb" path="res://sounds/glass/Glass04.mp3" id="25_v8lmv"]
+[ext_resource type="AudioStream" uid="uid://ban25xtp8oev7" path="res://sounds/glass/Glass31.mp3" id="26_i6qlg"]
+[ext_resource type="AudioStream" uid="uid://bu7gifmdrq3fp" path="res://sounds/glass/Glass32.mp3" id="27_ncyje"]
+[ext_resource type="AudioStream" uid="uid://c1jgsdtwehqso" path="res://sounds/glass/Glass33.mp3" id="28_u1itq"]
+[ext_resource type="AudioStream" uid="uid://d2m3uj7lmludo" path="res://sounds/glass/Glass34.mp3" id="29_1clsq"]
+[ext_resource type="AudioStream" uid="uid://cj2txb405ky17" path="res://sounds/glass/Glass35.mp3" id="30_doqkj"]
+[ext_resource type="AudioStream" uid="uid://d0qk6acp8ailj" path="res://sounds/glass/Glass36.mp3" id="31_8fkgl"]
+[ext_resource type="AudioStream" uid="uid://5s24ljklqn5x" path="res://sounds/glass/Glass37.mp3" id="32_l445j"]
+[ext_resource type="AudioStream" uid="uid://cnpgk6sm4cvwp" path="res://sounds/glass/Glass38.mp3" id="33_cs1yb"]
+[ext_resource type="AudioStream" uid="uid://cq7i42dlxdkiv" path="res://sounds/glass/Glass39.mp3" id="34_8jrtj"]
+[ext_resource type="AudioStream" uid="uid://bl7utfjrfwmp8" path="res://sounds/glass/Glass40.mp3" id="35_uvx81"]
+[ext_resource type="AudioStream" uid="uid://b8l41sk76pmxi" path="res://sounds/glass/Glass05.mp3" id="36_0vtrl"]
+[ext_resource type="AudioStream" uid="uid://bshbs18b5nfvx" path="res://sounds/glass/Glass41.mp3" id="37_8efvw"]
+[ext_resource type="AudioStream" uid="uid://g7vj3uotsyfg" path="res://sounds/glass/Glass42.mp3" id="38_fxoya"]
+[ext_resource type="AudioStream" uid="uid://lx2j6sm4byqn" path="res://sounds/glass/Glass43.mp3" id="39_v5qbw"]
+[ext_resource type="AudioStream" uid="uid://b2or5slk4x72i" path="res://sounds/glass/Glass44.mp3" id="40_7r5r0"]
+[ext_resource type="AudioStream" uid="uid://c0ppho6kdfwdv" path="res://sounds/glass/Glass45.mp3" id="41_ekib3"]
+[ext_resource type="AudioStream" uid="uid://pdkug3jhsky7" path="res://sounds/glass/Glass46.mp3" id="42_pxxaj"]
+[ext_resource type="AudioStream" uid="uid://dtj6k8sih2ols" path="res://sounds/glass/Glass47.mp3" id="43_es4nd"]
+[ext_resource type="AudioStream" uid="uid://dlhmxwtd8xf48" path="res://sounds/glass/Glass48.mp3" id="44_3le8c"]
+[ext_resource type="AudioStream" uid="uid://12kfhkejn8pa" path="res://sounds/glass/Glass49.mp3" id="45_s1ned"]
+[ext_resource type="AudioStream" uid="uid://be2povhjqfkht" path="res://sounds/glass/Glass50.mp3" id="46_kg768"]
+[ext_resource type="AudioStream" uid="uid://bd1wy1156kou0" path="res://sounds/glass/Glass06.mp3" id="47_8lfmn"]
+[ext_resource type="AudioStream" uid="uid://bryjtgfe77sty" path="res://sounds/glass/Glass51.mp3" id="48_xcwl7"]
+[ext_resource type="AudioStream" uid="uid://budo007woqhaf" path="res://sounds/glass/Glass52.mp3" id="49_7vvu1"]
+[ext_resource type="AudioStream" uid="uid://tlu46hntln1j" path="res://sounds/glass/Glass53.mp3" id="50_o0yu1"]
+[ext_resource type="AudioStream" uid="uid://p4o67c5brmes" path="res://sounds/glass/Glass54.mp3" id="51_oe8c4"]
+[ext_resource type="AudioStream" uid="uid://cq6teni27061i" path="res://sounds/glass/Glass55.mp3" id="52_0cpks"]
+[ext_resource type="AudioStream" uid="uid://brdrno3k6rh7c" path="res://sounds/glass/Glass56.mp3" id="53_taa17"]
+[ext_resource type="AudioStream" uid="uid://by7ds16uru03b" path="res://sounds/glass/Glass57.mp3" id="54_w44oy"]
+[ext_resource type="AudioStream" uid="uid://dd1fnhheidqbu" path="res://sounds/glass/Glass58.mp3" id="55_6t8dy"]
+[ext_resource type="AudioStream" uid="uid://da88x48y70k7e" path="res://sounds/glass/GlassOnTable01.mp3" id="56_0cqd0"]
+[ext_resource type="AudioStream" uid="uid://dcdhprag14nns" path="res://sounds/glass/GlassOnTable02.mp3" id="57_eu2cu"]
+[ext_resource type="AudioStream" uid="uid://duf0j05n1w372" path="res://sounds/glass/Glass07.mp3" id="58_t3ij6"]
+[ext_resource type="AudioStream" uid="uid://wgglo6pvcpuw" path="res://sounds/glass/GlassOnTable03.mp3" id="59_444ib"]
+[ext_resource type="AudioStream" uid="uid://blkf5eysubxnq" path="res://sounds/glass/GlassOnTable04.mp3" id="60_xk22n"]
+[ext_resource type="AudioStream" uid="uid://dsprpinr4hyb5" path="res://sounds/glass/GlassOnTable05.mp3" id="61_2g23k"]
+[ext_resource type="AudioStream" uid="uid://do4tnf6kg8aje" path="res://sounds/glass/Glass08.mp3" id="62_m4xha"]
+[ext_resource type="AudioStream" uid="uid://bx0lxdfsk2xbr" path="res://sounds/glass/Glass09.mp3" id="63_bifju"]
+[ext_resource type="AudioStream" uid="uid://c704oxp40w525" path="res://sounds/glass/Glass10.mp3" id="64_1jwvx"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_mb7c4"]
 playback_mode = 1
 random_pitch = 1.3
-streams_count = 4
-stream_0/stream = ExtResource("2_yebjr")
-stream_1/stream = ExtResource("3_ianuc")
-stream_1/weight = 0.5
-stream_2/stream = ExtResource("4_5px53")
-stream_3/stream = ExtResource("5_cn0xe")
+random_volume_offset_db = 0.3
+streams_count = 65
+stream_0/stream = ExtResource("2_8cjai")
+stream_1/stream = ExtResource("3_dcy6t")
+stream_2/stream = ExtResource("14_uacmt")
+stream_3/stream = ExtResource("25_v8lmv")
+stream_4/stream = ExtResource("36_0vtrl")
+stream_5/stream = ExtResource("47_8lfmn")
+stream_6/stream = ExtResource("58_t3ij6")
+stream_7/stream = ExtResource("62_m4xha")
+stream_8/stream = ExtResource("63_bifju")
+stream_9/stream = ExtResource("64_1jwvx")
+stream_10/stream = ExtResource("4_topqq")
+stream_11/stream = ExtResource("5_fbftl")
+stream_12/stream = ExtResource("6_oi6c5")
+stream_13/stream = ExtResource("7_i8x18")
+stream_14/stream = ExtResource("8_ariek")
+stream_15/stream = ExtResource("9_el7eq")
+stream_16/stream = ExtResource("10_3122r")
+stream_17/stream = ExtResource("11_l5bln")
+stream_18/stream = ExtResource("12_6re3x")
+stream_19/stream = ExtResource("13_57jra")
+stream_20/stream = ExtResource("15_ow1uw")
+stream_21/stream = ExtResource("16_tevyt")
+stream_22/stream = ExtResource("17_fntt8")
+stream_23/stream = ExtResource("18_723t3")
+stream_24/stream = ExtResource("19_hd5sy")
+stream_25/stream = ExtResource("20_rtno5")
+stream_26/stream = ExtResource("21_eg5nm")
+stream_27/stream = ExtResource("22_ufex7")
+stream_28/stream = ExtResource("23_y8r52")
+stream_29/stream = ExtResource("24_6x8he")
+stream_30/stream = ExtResource("26_i6qlg")
+stream_31/stream = ExtResource("27_ncyje")
+stream_32/stream = ExtResource("28_u1itq")
+stream_33/stream = ExtResource("29_1clsq")
+stream_34/stream = ExtResource("30_doqkj")
+stream_35/stream = ExtResource("31_8fkgl")
+stream_36/stream = ExtResource("32_l445j")
+stream_37/stream = ExtResource("33_cs1yb")
+stream_38/stream = ExtResource("34_8jrtj")
+stream_39/stream = ExtResource("35_uvx81")
+stream_40/stream = ExtResource("37_8efvw")
+stream_41/stream = ExtResource("38_fxoya")
+stream_42/stream = ExtResource("39_v5qbw")
+stream_43/stream = ExtResource("40_7r5r0")
+stream_44/stream = ExtResource("41_ekib3")
+stream_45/stream = ExtResource("42_pxxaj")
+stream_46/stream = ExtResource("43_es4nd")
+stream_47/stream = ExtResource("44_3le8c")
+stream_48/stream = ExtResource("45_s1ned")
+stream_49/stream = ExtResource("46_kg768")
+stream_50/stream = ExtResource("48_xcwl7")
+stream_51/stream = ExtResource("49_7vvu1")
+stream_52/stream = ExtResource("50_o0yu1")
+stream_53/stream = ExtResource("51_oe8c4")
+stream_54/stream = ExtResource("52_0cpks")
+stream_55/stream = ExtResource("53_taa17")
+stream_56/stream = ExtResource("54_w44oy")
+stream_57/stream = ExtResource("55_6t8dy")
+stream_58/stream = ExtResource("56_0cqd0")
+stream_59/stream = ExtResource("57_eu2cu")
+stream_60/stream = ExtResource("59_444ib")
+stream_61/stream = ExtResource("60_xk22n")
+stream_62/stream = ExtResource("61_2g23k")
+stream_63/stream = ExtResource("47_8lfmn")
+stream_64/stream = ExtResource("58_t3ij6")
 
 [node name="audio_collision_glass" instance=ExtResource("1_b32ln")]
 stream = SubResource("AudioStreamRandomizer_mb7c4")

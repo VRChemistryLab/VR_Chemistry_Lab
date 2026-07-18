@@ -1,0 +1,46 @@
+units:
+  length: cm
+  time: s
+  quantity: mol
+  activation-energy: J/mol
+phases:
+- name: gas
+  thermo: ideal-gas
+  kinetics: gas
+  reactions: none
+  species: [Br2]
+- name: surface
+  thermo: ideal-surface
+  kinetics: surface
+  reactions: all
+  species: [Na(s), NaBr]
+  site-density: 1.800000e-04
+  adjacent-phases: [gas]
+species:
+- name: Br2
+  composition: {Br: 2}
+  thermo:
+    model: constant-cp
+    cp0: 36.723
+    h0: 30910.0
+    s0: 245.394
+- name: Na(s)
+  composition: {Na: 1}
+  thermo:
+    model: constant-cp
+    cp0: 16.245
+    h0: 0.0
+    s0: 51.455
+- name: NaBr
+  composition: {Na: 1, Br: 1}
+  thermo:
+    model: constant-cp
+    cp0: 53.45
+    h0: -361414.0
+    s0: 86.818
+reactions:
+- equation: 2 Na(s) + Br2 <=> 2 NaBr
+  rate-constant:
+    A: 3.100000e+09
+    b: 0.0
+    Ea: 4.500000e+02
